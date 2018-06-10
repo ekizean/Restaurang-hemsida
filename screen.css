@@ -1,0 +1,162 @@
+/* CSS Document for Screens */
+p {
+    font-size: 18px;
+}
+
+a {color: black;}  
+
+header{
+    background-image: url("images/restaurant-owner-pos-system.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 180%;
+    background-position: -400px 0px;
+    height: 90vh;
+}
+
+.hero h1{
+    position: absolute;
+    top:20%;
+    left:5%;
+    color: orange;
+}
+
+#top-nav {
+    background-color: rgba(0,0,0,0.65) !important; 
+}
+
+#collapsibleNavbar .nav-link {padding: 0px 40px;}
+
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+#MenyBakgrund {
+        background-color: #fffdee;
+
+}
+
+#Meny {
+    padding: 60px 0px;
+    min-height: 70vh;
+}
+
+#rubriker .col-4 {
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 0 5px;
+    
+}
+
+#rubriker .col-4 .inner {
+    background-color: lightgrey;
+}
+
+.pris {
+    position: absolute;
+    right: 6%;
+}
+
+.lead {
+    text-align: center;
+    margin: 8px 0;
+}
+
+.disches {
+    margin-top: 10px;
+}
+
+dd {
+    padding-right: 50px
+}
+
+/* Meny till nav bar */
+li.nav-item {
+    text-align: center;
+    padding: 0px 1px;
+}
+
+
+
+/* Meny till maträtterna*/ 
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link { /* Copy paste från inspector mode */
+    color: ;
+    background-color: red;    
+}
+
+.nav-pills .nav-link {
+    color: ;
+    background-color: green ;  
+    margin-bottom: 2px;
+}
+
+#OmOss {
+    padding: 60px 0px;
+    height: 80vh;
+    background-color: green;
+    
+}
+
+#Text {
+    padding-left: 70px;
+    margin-right: 100px; 
+}
+
+#Galleri {
+    padding: 60px 0px;
+    background-color: black;
+    height: 80vh;
+}
+
+
+.row.footer {
+    background-color: #292323;
+    /*padding-left: 200px;*/
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+.row.footer h3{
+    color:blanchedalmond;
+}
+
+.row.footer p{
+    color:#ffffff;
+}
+
+/* Social media buttons */
+
+.fa.fa-facebook-square{
+    font-size: 40px;
+    opacity: 0.7;
+    color: white;
+}
+
+.fa.fa-instagram {
+    font-size: 40px;
+    opacity: 0.7;
+    margin-left: 5px;
+    color: white;
+}
+
+.row.footer {
+    padding-top: 40px;
+}
+
+#footermargin {
+    margin-left: auto;
+    margin-right:auto;
+    width: 90%;
+}
+
+@media only screen and (max-width: 700px) {
+    /* For mobile phones: */
+    #footermargin {
+        width: 180px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .fa.fa-facebook-square {font-size: 30px;}
+    .fa.fa-instagram {font-size: 30px;}
+    
+}
