@@ -99,13 +99,21 @@ li.nav-item {
 
 #OmOss {
     padding: 60px 0px;
-    background-color: green;
-    min-height: 70vh;
+    min-height: 70vh;   
+}
+
+#OmOss .row{
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 #OmOss p {
     padding-left: 70px;
     margin-right: 100px; 
+}
+
+#OmOssBakgrund{
+     background-color: green;
 }
 
 #Galleri {
@@ -116,17 +124,30 @@ li.nav-item {
     background-color: darkred;
 }
 
-.row.footer {
-    background-color: #292323;
-    /*padding-left: 200px;*/
-    padding-top: 20px;
+#burrata{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+footer{
+background-color: #292323;
+}
+
+#footermargin {
+    margin-left: auto;
+    margin-right:auto;
+    width: 90%;
+    padding-top: 50px;
     padding-bottom: 60px;
 }
-.row.footer h3{
+
+#footermargin h3{
     color:blanchedalmond;
 }
 
-.row.footer p{
+#footermargin p{
     color:#ffffff;
 }
 
@@ -145,16 +166,6 @@ li.nav-item {
     color: white;
 }
 
-.row.footer {
-    padding-top: 40px;
-}
-
-#footermargin {
-    margin-left: auto;
-    margin-right:auto;
-    width: 90%;
-}
-
 @media only screen and (max-width: 700px) {
     /* For mobile phones: */
     #footermargin {
@@ -163,13 +174,7 @@ li.nav-item {
         margin-left: auto;
         margin-right: auto;
     }
-    
-    #burrata{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-    }
+
     
     #OmOss p {
         padding-left: 20px;
@@ -180,5 +185,3 @@ li.nav-item {
     .fa.fa-instagram {font-size: 30px;}
     
 }
-
-
