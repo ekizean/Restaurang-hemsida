@@ -1,4 +1,4 @@
-html,body /* Tar bort det vita spacet till höger */
+html,body/* Tar bort det vita spacet till höger */
 /* 
 {
     width: 100%;
@@ -7,7 +7,7 @@ html,body /* Tar bort det vita spacet till höger */
     overflow-x:hidden;
 }
 Kommenterar bort pga fuckar up sticky-menyn
-*/ 
+*/  
 
 p {
     font-size: 18px;
@@ -19,13 +19,22 @@ header{
     background-image: url("logo.jpg");
     background-repeat: no-repeat;
     background-size: 33%;
-    background-position: 50%;
+    background-position: 50% 33%;
     height: 90vh;
     background-color: rgb(17,17,17);
 }
 
-#bokabord{
-    position: 50%;
+header #bokabord{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin-left: -57px;
+    margin-top: 150px;
+}
+
+#davidsdiv {
+    display: none;
+
 }
 
 .hero h1{
