@@ -16,11 +16,12 @@ p {
 a {color: black;}  
 
 header{
-    background-image: url("images/restaurant-owner-pos-system.jpg");
+    background-image: url("logo.jpg");
     background-repeat: no-repeat;
-    background-size: auto 180%;
-    background-position: -400px 0px;
+    background-size: 50%;
+    background-position: 50%;
     height: 90vh;
+    background-color: rgb(17,17,17);
 }
 
 .hero h1{
