@@ -24,6 +24,10 @@ header{
     background-color: rgb(17,17,17);
 }
 
+#bokabord{
+    position: 50%;
+}
+
 .hero h1{
     position: relative;
     padding: 19% 10%;
