@@ -8,3 +8,7 @@ $(document).on('click', 'a.smooth-scroll',function (event) {
     }, 500);
 });
 
+/* Fixar så att när man klickar på ett meny-item i mobil-version så stängs menylistan */
+$('#top-nav > li > .dropdown-toggle').click(function () {
+   window.location = $(this).attr('href');
+});

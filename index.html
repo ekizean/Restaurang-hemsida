@@ -37,21 +37,57 @@
             </button>
 
                           <!-- Navbar links -->
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <div class="collapse navbar-collapse" id="collapsibleNavbar" id="top-links">
               <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link smooth-scroll" href="#Meny">Meny</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link smooth-scroll" href="#OmOss">Om oss</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link smooth-scroll" href="#Galleri">Galleri</a>
-                </li>
+                  <li class="nav-item">
+                    <a class="nav-link smooth-scroll d-none d-sm-block" href="#MenyAnchorDesktop">Meny</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#MenyAnchor" class="nav-link smooth-scroll d-sm-none" data-target=".navbar-collapse" data-toggle="collapse">Meny</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link smooth-scroll d-none d-sm-block" href="#OmOssAnchorDesktop">Om Oss</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#OmOssAnchor" class="nav-link smooth-scroll d-sm-none" data-target=".navbar-collapse" data-toggle="collapse">Om Oss</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link smooth-scroll d-none d-sm-block" href="#GalleriAnchorDesktop">Galleri</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#GalleriAnchor" class="nav-link smooth-scroll d-sm-none" data-target=".navbar-collapse" data-toggle="collapse">Galleri</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link smooth-scroll d-none d-sm-block" href="#footermargin">Öppettider</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#footermargin" class="nav-link smooth-scroll d-sm-none" data-target=".navbar-collapse" data-toggle="collapse">Öppettider</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link smooth-scroll d-none d-sm-block" href="#footermargin">Kontakt</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#footermargin" class="nav-link smooth-scroll d-sm-none" data-target=".navbar-collapse" data-toggle="collapse">Kontakt</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link smooth-scroll d-none d-sm-block" href="#footermargin">Hitta hit</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#footermargin" class="nav-link smooth-scroll d-sm-none" data-target=".navbar-collapse" data-toggle="collapse">Hitta hit</a>
+                  </li>
+                  
               </ul>
             </div> 
         </nav>
         <div id="MenyBakgrund">
+            <div id="MenyAnchor"></div>
+            <div id="MenyAnchorDesktop"></div>
+
             <div class="container" id="Meny">
                 <div class="lead">Meny</div>
                 <p class="border border-info">[Förklaring av menyn, t.ex. : I Italien är maten helig. Då samlas familjen, njuter av god mat och umgås. Man äter rätterna i långsam takt och sitter gärna i flera timmar.]</p>
@@ -274,6 +310,8 @@
 </div>
 </div>
     <div id="OmOssBakgrund">
+        <div id="OmOssAnchor"></div>
+        <div id="OmOssAnchorDesktop"></div>
         <div class="container" id="OmOss"> <!-- Tar bort class container -->
             <div class="row">
                 <div class="col-sm-8">
@@ -292,6 +330,8 @@
         </div>
     </div>
         <div id="Galleri"> 
+            <div id="GalleriAnchor"></div>
+            <div id="GalleriAnchorDesktop"></div>
             <div class="lead">Galleri</div>
             <div class="container">
                 <div class="row">
@@ -324,21 +364,22 @@
                     <div class="col-sm-1"></div>
                     <div class="col-sm-3">
                         <h3>Öppettider</h3>
-                        <p>Måndag - Fredag <br> 17-22</p>
+                        <p>Tisdag - Lördag <br> 16:30-23:00</p>
                     </div>
                     <div class="col-sm-3">
                         <h3>Kontakt</h3>
-                        <p><i class="fa fa-phone"></i> 018 - 711 540
-                        <br><i class="fa fa-envelope-o"></i> Mejl@xx.se</p>
+                        <p><i class="fa fa-phne"></i>018 - 711 540
+                        <br><i class="fa fa-envelope-o"></i> kontakt@brezza.se</p>
                     </div>
                     <div class="col-sm-3">
                         <h3>Hitta hit</h3>
                         <p>Skolgatan 31
                         <br>753 11 Uppsala</p>
+                        <p><a class="fa fa-map-marker" href="https://www.google.se/maps/place/Trattoria+Commedia/@59.8607126,17.6267502,17z/data=!3m1!4b1!4m5!3m4!1s0x465fcbf442361423:0xd7d6a787874abc94!8m2!3d59.8607126!4d17.6289442"></a> <a id="karta" href="https://www.google.se/maps/place/Trattoria+Commedia/@59.8607126,17.6267502,17z/data=!3m1!4b1!4m5!3m4!1s0x465fcbf442361423:0xd7d6a787874abc94!8m2!3d59.8607126!4d17.6289442" target="_blank">Karta</a></p>
                     </div>
                     <div class="col-sm-2">
-                        <p><a href="https://www.facebook.com/Brezza-238323836937734/" class="fa fa-facebook-square"></a>
-                        <a a href="https://instagram.com" class="fa fa-instagram"></a></p>
+                        <p><a href="https://www.facebook.com/BrezzaUppsala" target="_blank" class="fa fa-facebook-square"></a>
+                        <a href="https://www.instagram.com/brezza.se" target="_blank" class="fa fa-instagram" id="insta"></a></p>
                     </div>
                 </div>
             </div>
