@@ -33,7 +33,7 @@ $( document ).ready(function() {
         }
     });
     
-        var invisible = false;
+    var invisible = false;
     $(document).scroll(function() {
       var y = $(this).scrollTop();
       if (y > 650 && invisible == false)  {
@@ -42,12 +42,12 @@ $( document ).ready(function() {
             mode: 'show'
         });
           invisible = true
-      } 
+      }
         else if (y <= 650 && invisible == true) {
             invisible = false;
             $('#bokabordmobil').effect("slide", {
-            direction: "up",
-            mode: 'hide'
+                direction: "up",
+                mode: 'show'
             });
         }
     });
