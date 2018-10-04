@@ -21,7 +21,7 @@ $( document ).ready(function() {
         console.log('stor');
       var y = $(this).scrollTop();
       if (y > 650 && imvisible == false)  {
-        $('#davidsdiv').effect("slide", {
+        $('#davidsdiv').show("slide", {
             direction: "right",
             mode: 'show'
         });
@@ -29,7 +29,7 @@ $( document ).ready(function() {
       } 
         else if (y <= 650 && imvisible == true) {
             imvisible = false;
-            $('#davidsdiv').effect("slide", {
+            $('#davidsdiv').hide("slide", {
             direction: "right",
             mode: 'hide'
         });
@@ -44,7 +44,7 @@ $( document ).ready(function() {
         console.log('liten');
       var y = $(this).scrollTop();
       if (y > 650 && invisible == false)  {
-        $('#bokabordmobil').effect("slide", {
+        $('#bokabordmobil').show("slide", {
             direction: "up",
             mode: 'show'
         });
@@ -52,7 +52,7 @@ $( document ).ready(function() {
       }
         else if (y <= 650 && invisible == true) {
             invisible = false;
-            $('#bokabordmobil').effect("slide", {
+            $('#bokabordmobil').hide("slide", {
                 direction: "up",
                 mode: 'hide'
             });
