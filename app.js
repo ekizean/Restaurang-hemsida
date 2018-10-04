@@ -14,10 +14,11 @@ $( document ).ready(function() {
        window.location = $(this).attr('href');
     });
     
-    if(window.matchMedia("(max-width: 700px)")){
+    if(window.matchMedia("(min-width: 700px)").matches){
     
     var imvisible = false;
     $(document).scroll(function() {
+        console.log('stor');
       var y = $(this).scrollTop();
       if (y > 650 && imvisible == false)  {
         $('#davidsdiv').effect("slide", {
@@ -37,9 +38,10 @@ $( document ).ready(function() {
         
     }
     
-    else {
+    if(window.matchMedia("(max-width: 700px)").matches){
     var invisible = false;
     $(document).scroll(function() {
+        console.log('liten');
       var y = $(this).scrollTop();
       if (y > 650 && invisible == false)  {
         $('#bokabordmobil').effect("slide", {
