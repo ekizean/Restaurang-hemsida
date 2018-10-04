@@ -8,12 +8,15 @@ html,body/* Tar bort det vita spacet till höger */
 }
 Kommenterar bort pga fuckar up sticky-menyn
 */  
-
+    
 p {
     font-size: 18px;
 }
 
-a {color: black;}  
+a {
+    color:#f4f0d9;
+    text-decoration: none;  
+}  
 
 header{
     background-image: url("logo.jpg");
@@ -34,7 +37,6 @@ header #bokabord{
 
 #davidsdiv {
     display: none;
-
 }
 
 .hero h1{
@@ -45,18 +47,19 @@ header #bokabord{
 }
 
 #top-nav {
-    background-color: rgba(0,0,0,0.65) !important; 
+    background-color: rgba(0,0,0,0.85) !important; 
 }
 
-#collapsibleNavbar .nav-link {padding: 0px 40px;}
+#collapsibleNavbar .nav-link {
+    padding: 0px 40px;
+}
 
 .navbar-collapse {
     flex-grow: 0;
 }
 
 #MenyBakgrund {
-        background-color: #fffdee;
-
+    background-color: #fffdee;
 }
 
 #Meny {
@@ -99,19 +102,20 @@ li.nav-item {
 
 /* Meny till maträtterna*/ 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link { /* Copy paste från inspector mode */
-    color: ;
-    background-color: red;    
+    color: #f4f0d9;
+    background-color: #580000;    
 }
 
 .nav-pills .nav-link {
-    color: ;
-    background-color: green ;  
+    color: rgb(169,150,107) ;
+    background-color: rgb(36,68,59) ;  
     margin-bottom: 2px;
 }
 
 #OmOss {
     padding: 60px 0px;
     min-height: 70vh; 
+    color: rgb(169,150,107);
 }
 
 #OmOss .row{
@@ -121,11 +125,11 @@ li.nav-item {
 
 #OmOss p {
     padding-left: 70px;
-    margin-right: 100px; 
+    margin-right: 100px;
 }
 
 #OmOssBakgrund{
-     background-color: green;
+     background-color: rgb(36,68,59);
 }
 
 #OmOssAnchor {
@@ -143,11 +147,12 @@ li.nav-item {
 #GalleriAnchorDesktop {display: block; position: relative; top: -122px; visibility: hidden;}
 
 #Galleri {
+    color: rgb(169,150,107);
     display: block;
     margin-left: auto;
     margin-right: auto;
     padding: 60px 0px;
-    background-color: darkred;
+    background-color: #580000;
 }
 
 #burrata{
@@ -174,11 +179,11 @@ background-color: #292323;
 } 
 
 #footermargin h3{
-    color:blanchedalmond;
+    color:rgb(169,150,107);
 }
 
 #footermargin p{
-    color:#ffffff;
+    color: #f4f0d9;
 }
 
 /* Social media buttons */
@@ -205,13 +210,33 @@ background-color: #292323;
 }
 
 #karta {
-    color: white;
     font-weight: bold;
     }
 
 #tele{
     text-decoration: none;
-    color: white;
+}
+
+#bokabordmobil { /* Diven som innehåller knappen*/
+    margin-left: -10px;
+    display: none;
+    text-align:center;
+    background:#580000;
+    padding:8px 15px;
+}
+
+#bokabordmobil a{
+    font-family:Helvatica, Arial, Serif;
+    color:#f4f0d9; 
+    text-decoration:none;
+}
+
+#bokabord {
+    font-family:Helvatica, Arial, Serif;text-align:center;text-decoration:none;background:#580000;color:#f4f0d9; padding:8px 15px
+}
+
+#bokabord2 {
+    font-family:Helvatica, Arial, Serif;text-align:center;text-decoration:none;background:#580000;color:#f4f0d9;padding:8px 15px
 }
 
 @media only screen and (max-width: 700px) {
@@ -240,5 +265,16 @@ background-color: #292323;
     
     header{
         background-size: 83%;
+    }
+    
+    #davidsdiv{
+        display: none !important;
+    }
+    
+}
+
+@media only screen and (min-width: 701px) {
+    #bokabordmobil{
+        display: none !important;
     }
 }
