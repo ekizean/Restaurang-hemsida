@@ -124,8 +124,8 @@ li.nav-item {
 }
 
 #OmOss p {
-    padding-left: 70px;
-    margin-right: 100px;
+    margin-left: 40px;
+    margin-right: 50px;
 }
 
 #OmOssBakgrund{
@@ -268,13 +268,13 @@ background-color: #292323;
     }
     
     #davidsdiv{
-        display: none !important;
+        /* display: none !important; */
     }
     
 }
 
 @media only screen and (min-width: 701px) {
     #bokabordmobil{
-        display: none !important;
+        /* display: none !important; */
     }
 }

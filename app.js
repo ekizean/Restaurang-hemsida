@@ -14,6 +14,8 @@ $( document ).ready(function() {
        window.location = $(this).attr('href');
     });
     
+    if(window.matchMedia("(max-width: 700px)")){
+    
     var imvisible = false;
     $(document).scroll(function() {
       var y = $(this).scrollTop();
@@ -32,7 +34,10 @@ $( document ).ready(function() {
         });
         }
     });
+        
+    }
     
+    else {
     var invisible = false;
     $(document).scroll(function() {
       var y = $(this).scrollTop();
@@ -47,9 +52,9 @@ $( document ).ready(function() {
             invisible = false;
             $('#bokabordmobil').effect("slide", {
                 direction: "up",
-                mode: 'show'
+                mode: 'hide'
             });
         }
     });
-    
+    }
 });
