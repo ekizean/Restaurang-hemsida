@@ -14,7 +14,28 @@ $( document ).ready(function() {
        window.location = $(this).attr('href');
     });
     
- 
+    if(window.matchMedia("(min-width: 700px)").matches){
+    
+        var imvisible = false;
+        $(document).scroll(function() {
+          var y = $(this).scrollTop();
+          if (y > 650 && imvisible == false)  {
+            $('#davidsdiv').show("slide", {
+                direction: "right",
+                mode: 'show'
+            });
+              imvisible = true
+          } 
+            else if (y <= 650 && imvisible == true) {
+                imvisible = false;
+                $('#davidsdiv').hide("slide", {
+                    direction: "right",
+                    mode: 'hide'
+                });
+            }
+        });
+        
+    }
     
     if(window.matchMedia("(max-width: 700px)").matches){
         var invisible = false;
