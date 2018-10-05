@@ -50,13 +50,13 @@ $( document ).ready(function() {
             });
               invisible = true
           }
-            else if (y <= 650 && invisible == true) {
-                $('#bokabordmobil').hide("slide", {
-                    direction: "up",
-                    mode: 'hide'
-                });
-                invisible = false;
-            }
+          else if (y <= 600 && invisible == true) {
+              $('#bokabordmobil').hide("slide", {
+                  direction: "up",
+                  mode: 'hide'
+              });
+              invisible = false;
+          }
         });
     }
 });
