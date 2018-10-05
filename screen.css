@@ -287,6 +287,14 @@ background-color: #292323;
         /* display: none !important; */
     }
     
+    .fixnavright{
+        display: none;
+    }
+    
+    .nav-item{
+            padding: 4px 40px;
+    }
+    
 }
 
 @media only screen and (min-width: 701px) {
