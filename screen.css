@@ -244,6 +244,12 @@ background-color: #292323;
     padding:8px 15px;
 }
 
+.fixnavright{
+    width: 120px; 
+    height: 28px;
+    margin-left: 30px;
+}
+
 @media only screen and (max-width: 700px) {
     /* For mobile phones: */
     #footermargin {
