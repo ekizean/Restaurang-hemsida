@@ -285,7 +285,7 @@ background-color: #292323;
 }
 
 @media only screen and (min-width: 701px) {
-    #bokabordmobil{
-        /* display: none !important; */
+    #logo {
+        margin-right: 70px;
     }
 }
