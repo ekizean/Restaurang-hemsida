@@ -14,49 +14,26 @@ $( document ).ready(function() {
        window.location = $(this).attr('href');
     });
     
-    if(window.matchMedia("(min-width: 700px)").matches){
-    
-    var imvisible = false;
-    $(document).scroll(function() {
-        console.log('stor');
-      var y = $(this).scrollTop();
-      if (y > 650 && imvisible == false)  {
-        $('#davidsdiv').show("slide", {
-            direction: "right",
-            mode: 'show'
-        });
-          imvisible = true
-      } 
-        else if (y <= 650 && imvisible == true) {
-            imvisible = false;
-            $('#davidsdiv').hide("slide", {
-            direction: "right",
-            mode: 'hide'
-        });
-        }
-    });
-        
-    }
+ 
     
     if(window.matchMedia("(max-width: 700px)").matches){
-    var invisible = false;
-    $(document).scroll(function() {
-        console.log('liten');
-      var y = $(this).scrollTop();
-      if (y > 650 && invisible == false)  {
-        $('#bokabordmobil').show("slide", {
-            direction: "up",
-            mode: 'show'
-        });
-          invisible = true
-      }
-        else if (y <= 650 && invisible == true) {
-            invisible = false;
-            $('#bokabordmobil').hide("slide", {
+        var invisible = false;
+        $(document).scroll(function() {
+          var y = $(this).scrollTop();
+          if (y > 650 && invisible == false)  {
+            $('#bokabordmobil').show("slide", {
                 direction: "up",
-                mode: 'hide'
+                mode: 'show'
             });
-        }
-    });
+              invisible = true
+          }
+            else if (y <= 650 && invisible == true) {
+                invisible = false;
+                $('#bokabordmobil').hide("slide", {
+                    direction: "up",
+                    mode: 'hide'
+                });
+            }
+        });
     }
 });
