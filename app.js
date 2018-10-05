@@ -33,6 +33,8 @@ $( document ).ready(function() {
                     mode: 'hide'
                 });
             }
+
+
         });
         
     }
@@ -49,11 +51,11 @@ $( document ).ready(function() {
               invisible = true
           }
             else if (y <= 650 && invisible == true) {
-                invisible = false;
                 $('#bokabordmobil').hide("slide", {
                     direction: "up",
                     mode: 'hide'
                 });
+                invisible = false;
             }
         });
     }
