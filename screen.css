@@ -48,6 +48,7 @@ header #bokabord{
 
 #top-nav {
     background-color: rgba(0,0,0,0.85) !important; 
+    top: -1px;
 }
 
 #collapsibleNavbar .nav-link {
@@ -58,12 +59,17 @@ header #bokabord{
     flex-grow: 0;
 }
 
+#tallrik{
+    height: 40px;
+    width: auto;
+}
+
 #MenyBakgrund {
-    background-color: #fffdee;
+    background-color: #f4f0d9;
 }
 
 #Meny {
-    padding: 60px 0px;
+    padding: 50px 0px;
     min-height: 70vh;
 }
 
@@ -117,7 +123,7 @@ li.nav-item {
 }
 
 #OmOss {
-    padding: 60px 0px;
+    padding: 50px 0px;
     min-height: 70vh; 
     color: rgb(169,150,107);
 }
@@ -137,26 +143,26 @@ li.nav-item {
 }
 
 #OmOssAnchor {
-    display: block; position: relative; top: -224px; visibility: hidden;
+    display: block; position: relative; top: -229px; visibility: hidden;
 }
 
-#OmOssAnchorDesktop {display: block; position: relative; top: -62px; visibility: hidden;}
+#OmOssAnchorDesktop {display: block; position: relative; top: -68px; visibility: hidden;}
 
-#MenyAnchor {display: block; position: relative; top: -224px; visibility: hidden;}
+#MenyAnchor {display: block; position: relative; top: -229px; visibility: hidden;}
 
-#MenyAnchorDesktop {display: block; position: relative; top: -62px; visibility: hidden;}
+#MenyAnchorDesktop {display: block; position: relative; top: -69px; visibility: hidden;}
 
-#GalleriAnchor {display: block; position: relative; top: -284px; visibility: hidden;}
+#GalleriAnchor {display: block; position: relative; top: -288px; visibility: hidden;}
 
-#GalleriAnchorDesktop {display: block; position: relative; top: -122px; visibility: hidden;}
+#GalleriAnchorDesktop {display: block; position: relative; top: -108px; visibility: hidden;}
 
 #Galleri {
     color: rgb(169,150,107);
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 60px 0px;
-    background-color: #580000;
+    padding: 50px 0px;
+    background-color: rgb(17,17,17);
 }
 
 #burrata{
@@ -254,6 +260,8 @@ background-color: #292323;
     height: 28px;
     margin-left: 30px;
 }
+
+
 
 @media only screen and (max-width: 700px) {
     /* For mobile phones: */
