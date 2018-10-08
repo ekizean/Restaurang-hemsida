@@ -152,7 +152,7 @@ li.nav-item {
 
 #MenyAnchorDesktop {display: block; position: relative; top: -69px; visibility: hidden;}
 
-#GalleriAnchor {display: block; position: relative; top: -288px; visibility: hidden;}
+#GalleriAnchor {display: block; position: relative; top: -278px; visibility: hidden;}
 
 #GalleriAnchorDesktop {display: block; position: relative; top: -108px; visibility: hidden;}
 
@@ -261,7 +261,10 @@ background-color: #292323;
     margin-left: 30px;
 }
 
-
+a:hover {
+    text-decoration: none;
+    color: aqua;
+}
 
 @media only screen and (max-width: 700px) {
     /* For mobile phones: */
