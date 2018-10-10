@@ -12,7 +12,7 @@ html,body {
 }
     
 p {
-    font-size: 18px;
+    font-size: 17px;
     color: #c9c8bb;
 }
 
@@ -100,7 +100,7 @@ header{
 .tallrik{
     position: absolute;
     left: 50%;
-    height: 40px;
+    height: 45px;
     margin: -50px;
     background-color: rgb(17,17,17);
     border: 30px solid rgb(17,17,17); 
