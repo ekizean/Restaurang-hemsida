@@ -385,6 +385,10 @@ a:hover {
     .tab-content .col-sm-4 {
         margin: 8px auto;
     }
+    
+    #Meny a {
+        font-size: 0.8rem;
+    }
 }
 
 @media only screen and (min-width: 701px) {
