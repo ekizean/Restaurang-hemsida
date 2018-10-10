@@ -43,12 +43,11 @@ header{
     background-image: url("logo.jpg");
     background-repeat: no-repeat;
     background-size: 33%;
-    background-position: 50% 33%;
+    background-position: 50% 41%;
     height: 90vh;
     background-color: rgb(17,17,17);
+    padding-bottom: 50px
 }
-
-
 
 #davidsdiv {
     display: none;
@@ -70,7 +69,8 @@ header{
 
 .tab-content {
     min-height: 300px;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
+    margin-top: 50px;
 }
 
 .tab-content .col-sm-4 {
@@ -131,7 +131,7 @@ header{
 
 .lead {
     text-align: center;
-    margin: 8px 0;
+    margin: 25px 0;
     font-size: 26px;
     color: rgb(169,150,107);
     font-weight: 700;
@@ -174,7 +174,7 @@ li.nav-item {
 }
 
 #OmOss {
-    padding: 80px 0px;
+    padding: 100px 0px;
     min-height: 70vh; 
     color: rgb(169,150,107);
 }
@@ -194,16 +194,16 @@ li.nav-item {
 }
 
 #OmOssAnchor {
-    display: block; position: relative; top: -229px; visibility: hidden;
+    display: block; position: relative; top: 0px; visibility: hidden;
 }
 
-#OmOssAnchorDesktop {display: block; position: relative; top: -68px; visibility: hidden;}
+#OmOssAnchorDesktop {display: block; position: relative; top: 0px; visibility: hidden;}
 
-#MenyAnchor {display: block; position: relative; top: -229px; visibility: hidden;}
+#MenyAnchor {display: block; position: relative; top: 0px; visibility: hidden;}
 
-#MenyAnchorDesktop {display: block; position: relative; top: -69px; visibility: hidden;}
+#MenyAnchorDesktop {display: block; position: relative; top: 0px; visibility: hidden;}
 
-#GalleriAnchor {display: block; position: relative; top: -278px; visibility: hidden;}
+#GalleriAnchor {display: block; position: relative; top: 0px; visibility: hidden;}
 
 #GalleriAnchorDesktop {display: block; position: relative; top: -117px; visibility: hidden;}
 
@@ -231,8 +231,8 @@ background-color: rgb(17,17,17);
     margin-left: auto;
     margin-right:auto;
     width: 90%;
-    padding-top: 90px;
-    padding-bottom: 70px;
+    padding-top: 110px;
+    padding-bottom: 90px;
 }
 
 #footermargin .col-sm-3{
@@ -292,7 +292,7 @@ background-color: rgb(17,17,17);
     color:#f4f0d9;
     padding: 10px 35px;
     
-    top: 50%;
+    top: 54%;
     left: 50%;
     position: absolute;
     margin-left: -90.5px;
@@ -398,7 +398,7 @@ a:hover {
     }
     
     #collapsibleNavbar .nav-link {
-    padding: 0px 40px;
-        
-}
+        padding: 0px 40px;    
+    }
+    
 }
