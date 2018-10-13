@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function() {
 
     /* Scrolla smooth när klickar på en anchor link */
     $(document).on('click', 'a.smooth-scroll',function (event) {
