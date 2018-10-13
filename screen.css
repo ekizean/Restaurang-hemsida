@@ -297,6 +297,7 @@ background-color: rgb(17,17,17);
     position: absolute;
     margin-left: -90.5px;
     margin-top: 150px;
+    z-index: 1;
 }
 
 #bokabord2 {
@@ -397,6 +398,10 @@ a:hover {
     
     #bokabord{
         top: 49%
+    }
+    
+    #delare1{
+        padding-top: 20px;
     }
 }
 
