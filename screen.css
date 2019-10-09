@@ -15,12 +15,12 @@ body {
 }
 
 .lower-case {
-    text-transform: lowercase;
+  text-transform: lowercase;
 }
 
 .paket {
-    border: 1px rgb(169, 150, 107) solid;
-    padding: 16px;
+  border: 1px rgb(169, 150, 107) solid;
+  padding: 16px;
 }
 
 p {
@@ -39,6 +39,7 @@ dt {
   text-transform: uppercase;
   padding-right: 77px;
 }
+
 dd {
   text-transform: lowercase;
   color: #c9c8bb;
@@ -241,35 +242,11 @@ li.nav-item {
   background-color: rgb(17, 17, 17);
 }
 
-#OmOssAnchor {
-  display: block;
-  position: relative;
-  top: 0px;
-  visibility: hidden;
-}
-
+#OmOssAnchor,
+#GalleriAnchor,
+#MenyAnchorDesktop,
+#MenyAnchor,
 #OmOssAnchorDesktop {
-  display: block;
-  position: relative;
-  top: 0px;
-  visibility: hidden;
-}
-
-#MenyAnchor {
-  display: block;
-  position: relative;
-  top: 0px;
-  visibility: hidden;
-}
-
-#MenyAnchorDesktop {
-  display: block;
-  position: relative;
-  top: 0px;
-  visibility: hidden;
-}
-
-#GalleriAnchor {
   display: block;
   position: relative;
   top: 0px;
@@ -424,6 +401,39 @@ a:hover {
 .footer-col-last {
   display: flex;
   flex-direction: column;
+}
+
+.vinprovning {
+  color: rgb(169, 150, 107);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 60px 0px 100px 0px;
+  background-color: rgb(17, 17, 17);
+  text-align: center;
+}
+
+.vin-distrikt {
+  border: 1px rgb(169, 150, 107) solid;
+  padding: 30px;
+  min-height: 255px;
+}
+
+.vinprovning .col-sm-4 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.vinprovning__bottom {
+  margin-top: 20px;
+}
+
+.vinprovning__bottom .col-sm-8 {
+  margin: auto;
+}
+
+.vinprovning__pris {
+  margin: 24px auto;
 }
 
 @media only screen and (max-width: 700px) {
