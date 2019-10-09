@@ -14,12 +14,12 @@ $(document).ready(function() {
        window.location = $(this).attr('href');
     });
     
-    if(window.matchMedia("(min-width: 700px)").matches){
+    if(window.matchMedia("(min-width: 1200px)").matches){
     
         var imvisible = false;
         $(document).scroll(function() {
           var y = $(this).scrollTop();
-          if (y > 650 && imvisible == false)  {
+          if ( y > 650 && imvisible == false)  {
             $('#davidsdiv').show("slide", {
                 direction: "right",
                 mode: 'show'
@@ -34,12 +34,11 @@ $(document).ready(function() {
                 });
             }
 
-
         });
         
     }
     
-    if(window.matchMedia("(max-width: 700px)").matches){
+    if(window.matchMedia("(max-width: 1200px)").matches){
         var invisible = false;
         $(document).scroll(function() {
           var y = $(this).scrollTop();

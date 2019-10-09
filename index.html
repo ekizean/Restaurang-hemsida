@@ -1,9 +1,40 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="sv">
 	<head>		
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	    <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124639446-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'UA-124639446-1');
+        </script>
+        
+        <script>
+        /**
+        * Funktion som spårar ett klick på en utgående länk i Analytics.
+        * Funktionen tar en giltig webbadressträng som argument och använder den
+        * som händelsenamn. Om transportmetoden ställs in som 'beacon' kan den här skickas
+        * med hjälpa av 'navigator.sendBeacon' i webbläsare som har stöd för den.
+        * 
+        * Har även lagt till en onclick funktion på boka bord knapparna nedan
+        */
+        var trackOutboundLink = function(url) {
+          gtag('event', 'click', {
+            'event_category': 'outbound',
+            'event_label': url,
+            'transport_type': 'beacon',
+            'event_callback': function(){document.location = url;}
+          });
+        }
+        </script>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Brezza är en italiensk restaurang och vinotek i centrala Uppsala med fokus på klassisk italiensk matlagning med moderna influenser.">
+        <meta name="theme-color" content="#111111"/>
 		<title>Italiensk restaurang i Uppsala | Brezza</title>
         
         <!-- Bootstrap står först, så om vill lägga egen css så kommer den overridea -->
@@ -25,35 +56,62 @@
         
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">     
 	</head>
-	<body>
+		<body>
         <header>
+            
+            <svg id="header-logo" width="511px" height="176px" viewBox="0 0 511 176" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>italiana_streck_guld_vektor</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" >
+        <g id="italiana_streck_guld">
+<!--
+            <text id="Italiana" font-family="Times-Italic, Times" font-size="34" font-style="italic" font-weight="normal" >
+                <tspan class="header-logo" x="201.169434" y="175">Italiana</tspan>
+            </text>
+-->
+            <path class="header-logo" d="M47.4950199,95.8236744 L0,95.8236744 L0,91.000761 L7.87350598,91.000761 C9.99005042,91.000761 11.6620955,90.6834672 12.8896912,90.0488701 C14.117287,89.4142731 14.7310757,88.5046977 14.7310757,87.3201165 L14.7310757,12.3111211 C14.7310757,8.6727647 12.614563,6.8536138 8.3814741,6.8536138 L0,6.8536138 L0,2.03070038 L49.0189243,2.03070038 C58.2470581,2.03070038 65.5066967,4.06138046 70.7980578,8.12280154 C76.0894189,12.1842226 78.7350598,17.5993695 78.7350598,24.3684046 C78.7350598,29.6144068 76.936024,34.0776724 73.3378984,37.7583353 C69.7397728,41.4389981 64.3849957,44.3792536 57.2734064,46.5791901 C74.967718,50.3867723 83.814741,58.424881 83.814741,70.6937571 C83.814741,77.9704699 80.5341464,83.9778984 73.9728586,88.716223 C67.4115708,93.4545476 58.5857128,95.8236744 47.4950199,95.8236744 Z M28.065239,11.5496084 L28.065239,45.0561648 L45.8441235,45.0561648 C57.7814342,45.0561648 63.75,38.2026195 63.75,24.4953234 C63.75,17.3032236 61.8028083,12.4803584 57.9083665,10.0265831 C54.6065572,7.91125967 48.5110006,6.8536138 39.6215139,6.8536138 C35.6424104,6.8536138 32.7216229,6.95937838 30.8590637,7.17091073 C28.9965046,7.38244308 28.065239,8.84199438 28.065239,11.5496084 Z M47.3680279,49.8790782 L28.065239,49.8790782 L28.065239,85.92401 C28.065239,89.3085276 30.3510728,91.000761 34.9228088,91.000761 L46.3520916,91.000761 C61.083241,91.000761 68.4487052,84.1472157 68.4487052,70.4399196 C68.4487052,64.0093362 66.586174,58.9749418 62.8610558,55.3365855 C59.1359375,51.6982291 53.9716466,49.8790782 47.3680279,49.8790782 Z M182.48755,6.8536138 L182.48755,2.03070038 L256.777888,2.03070038 L258.682769,33.6334751 L254.36504,33.6334751 C252.671804,24.2414389 250.089659,17.4301994 246.618526,13.1995525 C243.147393,8.96890554 238.279414,6.8536138 232.014442,6.8536138 L213.600598,6.8536138 C210.552774,6.8536138 209.028884,8.41892969 209.028884,11.5496084 L209.028884,44.929246 L217.156375,44.929246 C221.812772,44.929246 225.453174,43.3639301 228.077689,40.2332514 C230.702204,37.1025726 232.014442,32.4066249 232.014442,26.1452674 L236.459163,26.1452674 L236.459163,69.6784069 L232.014442,69.6784069 C232.014442,56.3095626 226.850151,49.6252406 216.521414,49.6252406 L209.028884,49.6252406 L209.028884,86.8124414 C209.028884,89.6046684 211.018406,91.000761 214.99751,91.000761 L229.601594,91.000761 C245.433346,91.000761 254.49202,80.9742781 256.777888,60.9210115 L261.349602,60.9210115 L259.825697,95.8236744 L182.48755,95.8236744 L182.48755,91.000761 L188.837151,91.000761 C193.408887,91.000761 195.694721,89.3085276 195.694721,85.92401 L195.694721,11.5496084 C195.694721,8.41892969 193.83219,6.8536138 190.107072,6.8536138 L182.48755,6.8536138 Z M428.852092,79.5780713 L460.854084,0 L465.044821,0 L498.824701,85.7970912 C500.094628,89.2662217 502.846094,91.000761 507.079183,91.000761 L510,91.000761 L510,95.8236744 L472.537351,95.8236744 L472.537351,91.000761 L475.585159,91.000761 C482.188778,91.000761 485.490538,89.6892801 485.490538,87.066279 C485.490538,86.3047625 485.321217,85.5432575 484.98257,84.781741 L477.236056,64.7285747 L440.02739,64.7285747 L435.709661,76.2781832 C434.947705,78.3088937 434.524403,79.5780688 434.439741,80.0857464 C434.101094,81.3549405 433.931773,82.6241155 433.931773,83.8933096 C433.931773,85.7547943 434.968864,87.4047218 437.043078,88.8431418 C439.117291,90.2815618 441.889923,91.000761 445.361056,91.000761 L448.535857,91.000761 L448.535857,95.8236744 L414.501992,95.8236744 L414.501992,91.000761 L415.517928,91.000761 C421.359591,91.000761 425.804268,87.1932358 428.852092,79.5780713 Z M475.331175,59.9056613 L458.949203,18.1493847 L442.186255,59.9056613 L475.331175,59.9056613 Z" id="BREZZA" ></path>
+            <path class="header-logo" d="M117.164458,50.8483778 L117.164458,86.5279035 C117.164458,87.7680801 117.843702,93.9984532 122.209401,99.0166588 C126.575101,104.034864 126.197381,103.613305 129.836617,107.402533 C133.475853,111.19176 137.083967,113.324729 144.853359,113.790968 C152.622752,114.257206 156.868162,111.412013 160.921932,108.665186 C162.875139,107.341697 164.163314,106.441745 164.163314,106.845964 C164.163314,108.089118 158.422283,115.000493 154.429327,117.948086 C150.436371,120.895679 146.813711,120.895679 143.651119,120.895679 C140.488527,120.895679 137.4972,119.737624 134.857261,118.842855 C132.217322,117.948086 129.595695,116.431422 128.331929,115.593327 C125.635068,113.804844 123.666284,112.395508 122.855319,111.70332 C117.164458,106.845964 111.893521,102.391546 108.444006,100.36443 C100.638347,95.7774166 93.0208998,95.3330687 88.4642593,95.3330687 C83.9076187,95.3330687 80.3932502,95.7551558 78.2000727,96.8083242 C72.6429185,99.4768812 71.2975134,104.988785 70.192968,104.746335 C69.0884227,104.503885 71.0490175,98.0244849 75.163108,94.2793669 C79.2771985,90.5342489 81.8832893,89.9928217 86.0192896,89.5948406 C88.7766231,89.3295199 92.6817524,89.3295199 97.7346776,89.5948406 C101.713781,89.5948406 103.703303,89.4893563 103.703303,86.5279035 L103.703303,11.518908 C103.703303,9.74203633 103.258835,8.51516712 102.369887,7.8382636 C101.480938,7.16136009 99.9358838,6.82291341 97.7346776,6.82291341 L88.4642593,6.82291341 L88.4642593,2 L136.975215,2 C146.288011,2 153.568815,4.07298591 158.817845,8.21901993 C164.066875,12.3650539 166.691351,17.99173 166.691351,25.0992169 C166.691351,30.8528967 164.744159,35.6757619 160.849717,39.5679571 C158.055879,42.3601841 154.584798,44.3908642 150.436371,45.6600583 C147.473209,46.5908006 142.816881,47.3946114 136.467247,48.071515 C142.30891,49.6791608 146.499605,51.3713942 149.039458,53.1482659 C152.849238,55.771267 155.346723,59.4518747 156.531988,64.1901993 C160.511092,80.2666577 163.982173,88.3047663 166.945335,88.3047663 C168.553909,88.3047663 169.887312,87.1202029 170.945584,84.7510406 C172.003856,82.3818784 172.532984,79.1666349 172.532984,75.1052138 L176.850713,75.1052138 C176.850713,89.5740264 171.517101,96.8083242 160.849717,96.8083242 C156.277981,96.8083242 152.616414,95.1583966 149.864907,91.858492 C147.113399,88.5585874 145.737666,83.8626397 145.737666,77.7705081 C145.737666,68.0400201 144.383098,61.1018632 141.673921,56.9558291 C138.541435,52.2175046 132.911511,49.8483778 124.78398,49.8483778 L117.164458,50.8483778 Z M117,11.5690759 L117,45.202551 L128.175299,45.202551 C136.472153,45.202551 142.504214,43.7006938 146.271663,40.6969345 C150.039112,37.6931752 151.922809,32.8068512 151.922809,26.0378161 C151.922809,17.830361 149.721636,12.4152141 145.319223,9.79221303 C142.186737,7.93072837 136.387493,7 127.921315,7 C124.111535,7 121.910362,7.04230583 121.317729,7.12691877 C118.439229,7.54998347 117,9.03068769 117,11.5690759 Z" id="Combined-Shape" ></path>
+            <g id="Z1" transform="translate(340.000000, 2.000000)">
+                <path class="header-logo" d="M4.18761384,32.5629229 L5.84517304,0 L75.2146169,0 L28.2553887,89.2028416 L36.0637523,89.2028416 C45.244126,89.2028416 52.6818237,86.7072867 57.1020036,81.7889039 C61.0121628,77.3793194 64.1572437,69.6626622 66.5373406,58.6387009 L71,58.6387009 L69.3424408,94 L0.198671566,94 L2.88717551,89.2028416 L15.6470488,89.2028416 L60.0972928,4.83355886 L36.0637523,4.83355886 C27.5634062,4.83355886 21.2307434,6.93232001 17.0655738,11.1299053 C12.9004042,15.3274905 10.0953321,22.4717583 8.65027322,32.5629229 L4.18761384,32.5629229 Z" id="Path" ></path>
+                <path class="header-logo" d="M4.5,91.5 L52.5,1.5" id="Path-19A" stroke="#AC9665" stroke-width="5"></path>
+            </g>
+            <g id="Z2" transform="translate(265.000000, 2.000000)">
+                <path class="header-logo" d="M4.18761384,32.5629229 L5.84517304,0 L75.2146169,0 L28.2553887,89.2028416 L36.0637523,89.2028416 C42.1840015,89.2028416 58.01353,89.2028416 83.5523378,89.2028416 L76.3897167,94 L69.3424408,94 L0.198671566,94 L2.88717551,89.2028416 L15.6470488,89.2028416 L60.0972928,4.83355886 L36.0637523,4.83355886 C27.5634062,4.83355886 21.2307434,6.93232001 17.0655738,11.1299053 C12.9004042,15.3274905 10.0953321,22.4717583 8.65027322,32.5629229 L4.18761384,32.5629229 Z" id="PathA" ></path>
+                <path class="header-logo" d="M4.5,91.5 L52.5,1.5" id="Path-19" stroke="#AC9665" stroke-width="5"></path>
+            </g>
+            <path class="header-logo" d="M179,111 L510.074465,111.25" id="Path-20" stroke="#AC9665" stroke-width="3" ></path>
+            <path class="header-logo" d="M0,111 L97.5,111" id="Path-20A" stroke="#AC9665" stroke-width="3" ></path>
+        </g>
+    </g>
+</svg>
             <a 
-               target="_blank" href="https://app.waiteraid.com/reservation/?hash=48b0a7fc649119dd131a35856724ce40&version=new";
-               id ="bokabord" class="bokabord">
+               target="_blank" rel="noreferrer" href="https://cloud.caspeco.se/public/webBooking?isWebBooking=true&system=se_breupp&unitId=13";
+               id ="bokabord" class="bokabord"
+               onclick="trackOutboundLink('https://cloud.caspeco.se/public/webBooking?isWebBooking=true&system=se_breupp&unitId=13'); return false;">
                Boka bord
             </a>
         </header>
         
-        <div class="delare" id="delare1"> 
-            <div class="linje"></div>
-            <img class="tallrik" src="tallrik_guld.png"/>
-        </div>
         
-        <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top justify-content-lg-center" id="top-nav">
+        
+        <nav class="navbar navbar-expand-xl bg-dark navbar-dark fixed-top justify-content-xl-center" id="top-nav">
             
                     <!-- Brand -->
-            <a id="logo" class="navbar-brand" href="#"><img id="tallrik" src="tallrik_guld.png"/></a>
+            <a id="logo" class="navbar-brand" href="#"><img id="tallrik" src="tallrik_guld.png" alt="logo"/></a>
             
             <!--Boka bord knapp för mobil -->
             <div id ="bokabordmobil" class="bokabord">
                 <a 
-                   target="_blank" href="https://app.waiteraid.com/reservation/?hash=48b0a7fc649119dd131a35856724ce40&version=new";
+                   target="_blank" rel="noreferrer" href="https://cloud.caspeco.se/public/webBooking?isWebBooking=true&system=se_breupp&unitId=13";
+                   onclick="trackOutboundLink('https://cloud.caspeco.se/public/webBooking?isWebBooking=true&system=se_breupp&unitId=13'); return false;"
                    >
                    Boka bord
                 </a>
             </div>
                     <!-- Toggler/collapsibe Button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"><span class="navbar-toggler-icon"></span>
+            <button name="navbar-toggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"><span class="navbar-toggler-icon"></span>
             </button>
 
                           <!-- Navbar links -->
@@ -66,12 +124,21 @@
                     <a href="#MenyAnchor" class="nav-link smooth-scroll d-sm-none" data-target=".navbar-collapse" data-toggle="collapse">Meny</a>
                   </li>
                   
+                  
                   <li class="nav-item">
-                    <a class="nav-link smooth-scroll d-none d-sm-block" href="#OmOssAnchorDesktop">Om Oss</a>
+                    <a class="nav-link smooth-scroll d-none d-sm-block" href="#Galleri">Galleri</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#Galleri" class="nav-link smooth-scroll d-sm-none" data-target=".navbar-collapse" data-toggle="collapse">Galleri</a>
+                  </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link smooth-scroll d-none d-sm-block" href="#OmOssAnchorDesktop">Om&nbspOss</a>
                   </li>
                   <li class="nav-item">
                     <a href="#OmOssAnchor" class="nav-link smooth-scroll d-sm-none" data-target=".navbar-collapse" data-toggle="collapse">Om Oss</a>
-                  </li>                                    
+                  </li>
+            
                   <li class="nav-item">
                     <a class="nav-link smooth-scroll d-none d-sm-block" href="#footermargin">Öppettider</a>
                   </li>
@@ -83,21 +150,21 @@
                     <a class="nav-link smooth-scroll d-none d-sm-block" href="#footermargin">Kontakt</a>
                   </li>
                   <li class="nav-item">
-                    <a href="#footermargin" class="nav-link smooth-scroll d-sm-none" data-target=".navbar-collapse" data-toggle="collapse">Kontakt</a>
+                    <a href="#anchor-contact" class="nav-link smooth-scroll d-sm-none" data-target=".navbar-collapse" data-toggle="collapse">Kontakt</a>
                   </li>
                   
                   <li class="nav-item">
-                    <a class="nav-link smooth-scroll d-none d-sm-block" href="#footermargin">Hitta hit</a>
+                    <a class="nav-link smooth-scroll d-none d-sm-block" href="#footermargin">Hitta&nbsphit</a>
                   </li>
                   <li class="nav-item">
-                    <a href="#footermargin" class="nav-link smooth-scroll d-sm-none" data-target=".navbar-collapse" data-toggle="collapse">Hitta hit</a>
+                    <a href="#tele" class="nav-link smooth-scroll d-sm-none" data-target=".navbar-collapse" data-toggle="collapse">Hitta hit</a>
                   </li>
                   <li class="nav-item">
                       <div class="fixnavright">
                           <!--Gör plats åt knappen-->
                         <div id="davidsdiv">
                           <a   
-                            target="_blank" href="https://app.waiteraid.com/reservation/?hash=48b0a7fc649119dd131a35856724ce40&version=new"; id ="bokabord2">
+                            target="_blank" rel="noreferrer" href="https://cloud.caspeco.se/public/webBooking?isWebBooking=true&system=se_breupp&unitId=13"; id ="bokabord2" onclick="trackOutboundLink('https://cloud.caspeco.se/public/webBooking?isWebBooking=true&system=se_breupp&unitId=13'); return false;">
                             Boka&nbsp;bord
                           </a> 
                         </div>
@@ -111,7 +178,7 @@
             <div id="MenyAnchorDesktop"></div>
 
             <div class="container" id="Meny">
-                <div class="lead">Meny</div>
+                <div class="lead"><h1>Meny</h1></div>
                 <p>Mat är en stor del av den italienska kulturen. Ju längre måltiden varar desto mer kvalitetstid med familj och vänner runt bordet. I Italien är det därför vanligt att servera många rätter, minst fyra men även ännu fler.
                 </br></br>
                 </p>
@@ -128,7 +195,7 @@
                     <a class="nav-link" data-toggle="pill" href="#Pizza">Pizza</a>
                   </li>
                   <li class="nav-item col-4 col-sm-4" >
-                    <a class="nav-link" data-toggle="pill" href="#Grillat">Grillat</a>
+                    <a class="nav-link" data-toggle="pill" href="#Grillat">Secondi</a>
                   </li>
                   <li class="nav-item col-4 col-sm-4" >
                     <a class="nav-link" data-toggle="pill" href="#Dessert">Dessert</a>
@@ -141,62 +208,42 @@
               <!-- Tab panes -->
 <div class="tab-content">
     <div id="Antipasti" class="container tab-pane active"><br>
-      <h3>Antipasti</h3>
+      <h2>Antipasti</h2>
         <div class="row">
             <div class="col-sm-4">
                 <dl>    
-                    <dt>Antipastitallrik <span class="pris">185:-</span></dt><dd>Chark, picklade grönsaker, oliver, bröd, Burrata, tomat, bröd  </dd>
+                    <dt>Bruschetta<span class="pris">95:-</span></dt>
+                    <dd>Basilika- och myntamarinerad grillad aubergin och paprika på vitlöksbröd</dd>
+                </dl>
+            </div>
+            <div class="col-sm-4">
+              <dl>    
+                    <dt>Charktallrik<span class="pris">165:-/295:-</span></dt><dd>Italiensk chark från Luigi Guffanti med pate di olive och grönsaker</dd>
                 </dl>
             </div>
             <div class="col-sm-4">
                 <dl>    
-                    <dt>Pilgrimsmusslor<span class="pris">135:-</span></dt>
-                    <dd>Pilgrimsmusslor, durumrisotto, parmesan</dd>
-                </dl>
-            </div>
-            <div class="col-sm-4">
-                <dl>    
-                    <dt>Hemgjord Pasta<span class="pris">125:-</span></dt>
-                    <dd>Svamp- och fläskfylld hemgjord pasta, svampconsommé</dd>
+                    <dt>Gamberi all’aglio<span class="pris">135:-</span></dt>
+                    <dd>Chili- och vitlöksfrästa stora räkor</dd>
                 </dl>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-4">
                 <dl>    
-                    <dt>Grönsaker <span class="pris">115:-</span></dt><dd>Friterade grönsaker, vegansk majonäs, olivolja (vegan)</dd>
+                    <dt>Friterad mozzarella<span class="pris">125:-</span></dt><dd>Med fikonchutney och basilika</dd>
                 </dl>
             </div>
             <div class="col-sm-4">
                 <dl>    
-                    <dt>Mozzarella<span class="pris">120:-</span></dt>
-                    <dd>Panerad och stekt mozzarella, bakad tomat, grillad paprika</dd>
+                    <dt>Grappamarinerad oxfilécarpaccio<span class="pris">135:-</span></dt>
+                    <dd>Parmiggiano-reggiano, rostade pinjenötter, granatäpple och citronvinägrett</dd>
                 </dl>
             </div>
             <div class="col-sm-4">
-                <dl>    
-                    <dt>Tartar <span class="pris">155:-</span></dt>
-                    <dd>Tartar(kalv), tryffel, citronemulsion, friterad kapris</dd>
-                </dl>
-            </div>
-        </div>
-        <div class="row">
-           <div class="col-sm-4">
-                <dl>    
-                    <dt>Carpaccio <span class="pris">155:-</span></dt>
-                    <dd>Carpaccio (fisk), korall, örter, citruskräm, rostade valnötter</dd>
-                </dl>
-            </div>
-            <div class="col-sm-4">
-                <dl>    
-                    <dt><span class="pris"></span></dt>
-                    <dd></dd>
-                </dl>
-            </div>
-            <div class="col-sm-4">
-                <dl>    
-                    <dt><span class="pris"></span></dt>
-                    <dd></dd>
+              <dl>    
+                    <dt>Vitello tonnato<span class="pris">125:-</span></dt>
+                    <dd>Kallskuren kalv, tonfisksås, kapris och rostade pinjenötter</dd>
                 </dl>
             </div>
         </div>
@@ -204,36 +251,36 @@
     
     
     <div id="Grillat" class="container tab-pane fade"><br>
-      <h3>Grillat</h3>
+      <h2>Secondi<span><br/><i>Alla varmrätter serveras med rostad potatis och grillade grönsaker</i></span></h2>
         <div class="row">
             <div class="col-sm-4">
                 <dl>    
-                    <dt>Hjortfilé<span class="pris">315:-</span></dt><dd>Hjortfilé, bräserad savoykål, körsbärssås, quinoakrisp</dd>
+                    <dt>Grillad oxfilé<span class="pris">345:-</span></dt><dd>Skivad med svart tryffelsmör, rödvinssås och parmesan</dd>
                 </dl>
             </div>
             <div class="col-sm-4">
                 <dl>    
-                    <dt>Seabream<span class="pris">240:-</span></dt>
-                    <dd>Seabream fylld med fänkål, rostad fänkålsfrön, kummin, dill, vattenkrasse</dd>
+                    <dt>Osso Buco<span class="pris">225:-</span></dt>
+                    <dd>Nattbakat kalvlägg med gremolata och tomatsås</dd>
                 </dl>
             </div>
             <div class="col-sm-4">
                 <dl>    
-                    <dt>Lammfilé  <span class="pris">235:-</span></dt>
-                    <dd>Lammfilé, rosmarinsky, olivoljeconfiterad cocktailtomat på kvist</dd>
+                    <dt>Sauterad fisk och skaldjur<span class="pris">280:-</span></dt>
+                    <dd>Soffritto, kapris, tomatsås och oliver</dd>
                 </dl>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-4">
                 <dl>    
-                    <dt>Vannameiräka<span class="pris">235:-</span></dt><dd>Chili- och gremolatamarinerad asc-märkt Vannameiräka</dd>
+                    <dt>Havsabborre<span class="pris">245:-</span></dt><dd>Saffran- och apelsinmarinerad fänkål, karamelliserad citron och örtolja</dd>
                 </dl>
             </div>
             <div class="col-sm-4">
                 <dl>    
-                    <dt>Polenta<span class="pris">185:-</span></dt>
-                    <dd>Polentakräm, spenat, grillad jordärtskocka, chips, grönsaks- och havreskum</dd>
+                    <dt>Krispig sötpotatis<span class="pris">220:-</span></dt>
+                    <dd>Fregolinarisotto, friterad purjolök, grillad radicchio och örtskum</dd>
                 </dl>
             </div>
             <div class="col-sm-4">
@@ -245,92 +292,145 @@
         </div>
     </div>
     <div id="Avsmakningsmeny" class="container tab-pane fade"><br>
-      <h3>Avsmakningsmeny 4 rätter</h3>
+      <h2>Avsmakningsmeny</h2>
         <div class="row">
             <div class="col-sm-4">
                 <dl>    
-                    <dt>Kött<span class="pris">565:-</span></dt><dd>Carpaccio (fisk), korall, örter, citruskräm, rostade valnötter </br></br>
+                    <dt>4-rätters<span class="pris">565:-</span></dt><dd>Biffcarpaccio</br></br>
                 
-                    Gnocchi, salsiccia </br></br>
+                    Pasta alla norma</br></br>
     
-                    Hjortfilé, bräserad savoykål, körsbärssås, quinoakrisp </br></br>
+                    Hjortgryta <i>eller</i> Havsabborre</br></br>
 
-                    Chokladkaka i kopp 
+                    Mille-feuille choklad
                     </dd>
                 </dl>
             </div>
             <div class="col-sm-4">
                 <dl>    
-                    <dt>Fisk<span class="pris">525:-</span></dt>
-                    <dd>Tartar(kalv), tryffel, citronemulsion, friterad kapris  </br></br>
-                
-                    Linguine Vongole  </br></br>
-    
-                    Seabream fylld med fänkål, rostad fänkålsfrön, kummin, dill, vattenkrasse  </br></br>
-
-                    Citronkräm med maräng och biscottismulor
-                    </dd>
+                    <dt>Sista måltiden<span class="pris">925:-</span></dt>
+                    <dd>10-rätters avsmakningsmeny enligt kockarnas val</dd>
                 </dl>
             </div>
             <div class="col-sm-4">
-                <dl>    
-                    <dt>Vegan <span class="pris">495:-</span></dt>
-                    <dd>Friterade grönsaker, vegansk majonäs, olivolja</br></br>
-                
-                    Pasta, rödpesto, bakade tomater, robiola</br></br>
-    
-                    Polentakräm, spenat, grillad jordärtskocka, chips, grönsaks- och havreskum </br></br>
-
-                    Sorbet med bär
-                    </dd>
-                </dl>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <dl>    
-                    <dt>Sista måltiden<span class="pris">895:-</span></dt><dd>10-rätters avsmakningsmeny enligt kockarnas val</dd>
-                </dl>
             </div>
         </div>
     </div>
           <div id="Pizza" class="container tab-pane fade"><br>
-              <div class="col-sm-5">
-                  <h3>Pizzamenyn kommer upp inom kort.</h3>
-              </div>
-    </div>
-
-    <div id="Pasta" class="container tab-pane fade"><br>
-      <h3>Pasta</h3>
+               <h2>Pizza <span id="pizzarabatt"><br /><i>10% rabatt vid avhämtning</i></span></h2>
         <div class="row">
             <div class="col-sm-4">
                 <dl>    
-                    <dt>Gnocchi <span class="pris">169:-</span></dt><dd>Gnocchi, salsiccia</dd>
+                    <dt>Margerita<span class="pris">125:-</span></dt><dd>Tomatsås och basilika</dd>
                 </dl>
             </div>
             <div class="col-sm-4">
                 <dl>    
-                    <dt>Linguine<span class="pris">189:-</span></dt>
-                    <dd>Linguine Vongole</dd>
+                    <dt>Verdure<span class="pris">145:-</span></dt>
+                    <dd>Blandade grillade grönsaker, kronärtskocka, lök och tomatsås</dd>
                 </dl>
             </div>
             <div class="col-sm-4">
                 <dl>    
-                    <dt>Pasta pesto <span class="pris">155:-</span></dt>
-                    <dd>Pasta, rödpesto, bakade tomater, robiola</dd>
+                    <dt>Pizza Brezza<span class="pris">165:-</span></dt>
+                    <dd>Färsk salsiccia med nduja calabrese, rostad paprika, tomatsås och oliver</dd>
                 </dl>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-4">
                 <dl>    
-                    <dt>Cannelloni<span class="pris">195:-</span></dt><dd>Grönsakscanneloni med svamp, pastachips, skott</dd>
+                    <dt>Inferno<span class="pris">145:-</span></dt><dd>Spianata Calabrese, färsk chili, tomatsås, oliver, ricotta, pinjenötter och basilika</dd>
                 </dl>
             </div>
             <div class="col-sm-4">
                 <dl>    
-                    <dt>Ostpasta<span class="pris">145:-</span></dt>
-                    <dd>Mac n formaggio, tryffel</dd>
+                    <dt>Napoletana<span class="pris">135:-</span></dt>
+                    <dd>Sardeller, kapris, tomatsås, oliver, oregano och basilika</dd>
+                </dl>
+            </div>
+            <div class="col-sm-4">
+                <dl>    
+                    <dt>Frutti di Mare<span class="pris">165:-</span></dt>
+                    <dd>Musslor, skaldjur, tomatsås, vitlöksolja, basilika och citron</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="row">
+           <div class="col-sm-4">
+                <dl>    
+                    <dt>24 con 24<span class="pris">165:-</span></dt>
+                    <dd>24 månaders Parmaskinka, 24 månaders parmesanost, buffelmozzarella, tomatsås,
+ruccola, körsbärstomater och basilika</dd>
+                </dl>
+            </div>
+            <div class="col-sm-4">
+                <dl>    
+                    <dt>Golosa<span class="pris">165:-</span></dt>
+                    <dd>Ruccola, spianata Calabrese, rökt scamorza, pancetta coppata och basilika</dd>
+                </dl>
+            </div>
+            <div class="col-sm-4">
+                <dl>    
+                    <dt>Giardino<span class="pris">165:-</span></dt>
+                    <dd>Pestosås, potatis, lök, körsbärstomater, 24 månaders parmesanost, färsk rosmarin och
+basilika</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="row">
+           <div class="col-sm-4">
+                <dl>    
+                    <dt>Sorrentina<span class="pris">145:-</span></dt>
+                    <dd>Buffelmozzarella, körsbärstomater, rökt scamorza, oregano och basilika</dd>
+                </dl>
+            </div>
+            <div class="col-sm-4">
+                <dl>    
+                    <dt><span class="pris"></span></dt>
+                    <dd></dd>
+                </dl>
+            </div>
+            <div class="col-sm-4">
+                <dl>    
+                    <dt><span class="pris"></span></dt>
+                    <dd></dd>
+                </dl>
+            </div>
+        </div>    
+    </div>
+
+    <div id="Pasta" class="container tab-pane fade"><br>
+      <h2>Pasta</h2>
+        <div class="row">
+            <div class="col-sm-4">
+                <dl>    
+                    <dt>Taglietelle alla Genovese<span class="pris">165:-</span></dt><dd>Pesto och grillade grönsaker</dd>
+                </dl>
+            </div>
+            <div class="col-sm-4">
+                <dl>    
+                    <dt>Pasta Ricci di mare<span class="pris">225:-</span></dt>
+                    <dd>Grillad scampi och sås av sjöborre</dd>
+                </dl>
+            </div>
+            <div class="col-sm-4">
+                <dl>    
+                    <dt>Linguine ai vongole<span class="pris">195:-</span></dt>
+                    <dd>Vitvinskokta venusmusslor med vitlök och örter</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <dl>    
+                    <dt>Stekt gnocchi<span class="pris">175:-</span></dt><dd>Salsicciafärs, spenat och parmiggiano-reggiano</dd>
+                </dl>
+            </div>
+            <div class="col-sm-4">
+                <dl>    
+                    <dt><span class="pris"></span></dt>
+                    <dd></dd>
                 </dl>
             </div>
             <div class="col-sm-4">
@@ -343,42 +443,61 @@
         
     </div>
     <div id="Dessert" class="container tab-pane fade"><br>
-      <h3>Dessert</h3>
+      <h2>Dessert</h2>
         <div class="row">
             <div class="col-sm-4">
                 <dl>    
-                    <dt>Choklad <span class="pris">90:-</span></dt><dd>Chokladkaka i kopp</dd>
+                    <dt>Tiramisú<span class="pris">95:-</span></dt><dd></dd>
                 </dl>
             </div>
             <div class="col-sm-4">
                 <dl>    
-                    <dt>Pannacotta<span class="pris">85:-</span></dt>
-                    <dd>Pannacotta della nonna</dd>
+                    <dt>Choklad & hasselnötsterrine<span class="pris">95:-</span></dt>
+                    <dd>Med kakaoböna och marinerade bär</dd>
                 </dl>
             </div>
             <div class="col-sm-4">
                 <dl>    
-                    <dt>Tiramisuinspiration<span class="pris">85:-</span></dt>
-                    <dd>Dessert inspirerad av Tiramisu</dd>
+                    <dt>Citronmousse med timjan & kardemumma<span class="pris">95:-</span></dt>
+                    <dd>Serveras med blåbär och biscottismulor</dd>
                 </dl>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-4">
                 <dl>    
-                    <dt>Citronkräm <span class="pris">85:-</span></dt><dd>Citronkräm med maräng och biscottismulor</dd>
+                    <dt>Pistagepannacotta<span class="pris">95:-</span></dt><dd>Med saltkola och hallon</dd>
                 </dl>
             </div>
             <div class="col-sm-4">
                 <dl>    
-                    <dt>Sorbet<span class="pris">42:-</span></dt>
-                    <dd>Sorbet (vegansk)</dd>
+                    <dt>Osttallrik<span class="pris">125:-</span></dt>
+                    <dd>Ostar från Luigi Guffanti med hemmagjord marmelad och inlagda fikon</dd>
                 </dl>
             </div>
             <div class="col-sm-4">
                 <dl>    
-                    <dt>Ost<span class="pris">135:-</span></dt>
-                    <dd>Ostar</dd>
+                    <dt>Vino santo con Cantuccini allo Zafferano<span class="pris">95:-</span></dt>
+                    <dd></dd>
+                </dl>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <dl>    
+                    <dt>Hemmagjord glass<span class="pris">45:-</span></dt><dd></dd>
+                </dl>
+            </div>
+            <div class="col-sm-4">
+                <dl>    
+                    <dt><span class="pris"></span></dt>
+                    <dd></dd>
+                </dl>
+            </div>
+            <div class="col-sm-4">
+                <dl>    
+                    <dt><span class="pris"></span></dt>
+                    <dd></dd>
                 </dl>
             </div>
         </div>
@@ -386,10 +505,52 @@
   </div>
 </div>
 </div>
-<div class="delare"> 
-    <div class="linje"></div>
-    <img class="tallrik" src="tallrik_guld.png"/>
-</div>
+    <div class="delare"> 
+        <div class="linje"></div>
+        <img class="tallrik" src="tallrik_guld.png" alt="logo"/>
+    </div>
+
+<div id="Galleri" class="Bakgrund">
+        <div id="GalleriAnchor"></div>
+        <div id="GalleriAnchorDesktop"></div>
+        <div class="container" > <!-- Tar bort class container -->
+            <div class="lead"><h1>Galleri</h1></div>
+            <div class="row">
+                
+                <div class="col-sm-4">
+                    <img class="galleribild img-fluid" src="./images/Brezza4.jpg" alt="Vinkällare"/>
+                </div> 
+                <div class="col-sm-4">
+                    <img class="galleribild img-fluid" src="./images/Brezza6.jpg" alt="Stora salen"/>
+                </div> 
+                <div class="col-sm-4">
+                    <img class="galleribild img-fluid" src="./images/104 Brezza.jpg" alt="Skaldjur"/>
+                </div>
+            </div>
+            <div class="row">
+                
+                <div class="col-sm-4">
+                    <img class="galleribild img-fluid" src="./images/Brezza9.jpg" alt="kassan"/>
+                </div> 
+                <div class="col-sm-4">
+                    <img class="galleribild img-fluid" src="./images/106 Brezza.jpg" alt="italiensk charktalrik"/>
+                </div> 
+                <div class="col-sm-4">
+                    <img class="galleribild img-fluid" src="./images/Brezza11.jpg" alt="lilla salen"/>
+                </div> 
+                
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="delare"> 
+        <div class="linje"></div>
+        <img class="tallrik" src="tallrik_guld.png" alt="logo"/>
+    </div>
+    
+
     <div id="OmOssBakgrund">
         <div id="OmOssAnchor"></div>
         <div id="OmOssAnchorDesktop"></div>
@@ -397,12 +558,12 @@
             <div class="row">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-8">
-                    <div class="lead">Om Brezza</div>
+                    <div class="lead"><h1>Om Brezza</h1></div>
                     <p id="Text">BREZZA betyder bris på italienska – Brisen från Italien - och vår tanke är att du ska få uppleva hur Italien smakar på riktigt vid ett besök hos oss. BREZZA syftar också på den italienska brisen som är nödvändig i vinodling för att vindruvor ska kunna växa på bästa sätt.  </br></br>
 
                     BREZZA är en italiensk restaurang och vinotek i centrala Uppsala med fokus på klassisk italiensk matlagning med moderna influenser. Våra leverantörer är i stor utsträckning handplockade från Italien.  </br></br>
 
-                    Här kan du äta allt från charkuterier, ostar och vedugnsbakad pizza till á la carte med flera rätter på italienskt vis - eller endast ta ett glas vin från vår vinkällare, med eller utan tilltugg. Vi är mycket stolta över vår samling av viner från olika regioner av Italien, där utbudet vittnar om en förkärlek för de världskända vinerna från norra Italien med Amarone och Barolo på tronen.  
+                    Här kan du äta allt från <strong>charkuterier, ostar och vedugnsbakad pizza till á la carte</strong> med flera rätter på italienskt vis - eller endast ta ett glas vin från vår vinkällare, med eller utan tilltugg. Vi är mycket stolta över vår samling av viner från olika regioner av Italien, där utbudet vittnar om en förkärlek för de världskända vinerna från norra Italien med Amarone och Barolo på tronen.  
 
                     Kom och upplev de bästa av smaker som Italien har att erbjuda! 
                     </p>
@@ -411,37 +572,43 @@
             </div>
         </div>
     </div>
+
+
         <div class="delare"> 
             <div class="linje"></div>
-            <img class="tallrik" src="tallrik_guld.png"/>
+            <img class="tallrik" src="tallrik_guld.png" alt="logo"/>
         </div>
         
         <footer>
             <div class="container">
                 <div class="row" id="footermargin">
-                    <div class="col-sm-1"></div>
+                    
                     <div class="col-sm-3">
                         <h3>ÖPPETTIDER</h3>
-                        <p>Tisdag - Lördag <br> 16:30 - 23:00</p>
+                        <p>Tisdag - Torsdag <br> 16:30 - 22:00</p>
+                        <p>Fredag - Lördag <br> 16:30 - 23:00</p>
+                        <p id=anchor-contact>Söndag <br> 16:30 - 21:00</p>
                     </div>
                     <div class="col-sm-3">
-                        <h3>KONTAKT</h3>
-                        <p><a id="tele" href="tel:018 71 15 40"><i class="fa fa-phone"></i> 018 - 71 15 40</a> 
+                        <h3 id="kontakt">KONTAKT</h3>
+                        <p><a id="tele" href="tel:018 71 15 40"><i class="fa fa-phone"></i> 018&nbsp-&nbsp71&nbsp15&nbsp40</a> 
                             <br><a href="mailto:kontakt@brezza.se"><i class="fa fa-envelope-o"></i> kontakt@brezza.se </a>
                         </p>
                     </div>
                     <div class="col-sm-3">
-                        <h3>HITTA HIT</h3>
-                        <p>Skolgatan 31
-                        <br>753 11 Uppsala</p>
-                        <p><a class="fa fa-map-marker" href="https://www.google.se/maps/place/Brezza/@59.8607126,17.6289442,15z/data=!4m2!3m1!1s0x0:0xe870a29a3fb802c6?sa=X&ved=2ahUKEwi1tZH5u5TeAhVGqYsKHSvID9QQ_BIwCnoECAoQCw"></a> <a id="karta" href="https://www.google.se/maps/place/Brezza/@59.8607126,17.6289442,15z/data=!4m2!3m1!1s0x0:0xe870a29a3fb802c6?sa=X&ved=2ahUKEwi1tZH5u5TeAhVGqYsKHSvID9QQ_BIwCnoECAoQCw" target="_blank">Karta</a></p>
+                        <h3 id="hittahit">HITTA HIT</h3>
+                        <p>Skolgatan&nbsp31
+                        <br>753&nbsp11 Uppsala</p>
+                        <p><a class="fa fa-map-marker" rel="noreferrer" href="https://www.google.se/maps/place/Brezza/@59.8607126,17.6289442,15z/data=!4m2!3m1!1s0x0:0xe870a29a3fb802c6?sa=X&ved=2ahUKEwi1tZH5u5TeAhVGqYsKHSvID9QQ_BIwCnoECAoQCw"></a> <a id="karta" rel="noreferrer" href="https://www.google.se/maps/place/Brezza/@59.8607126,17.6289442,15z/data=!4m2!3m1!1s0x0:0xe870a29a3fb802c6?sa=X&ved=2ahUKEwi1tZH5u5TeAhVGqYsKHSvID9QQ_BIwCnoECAoQCw" target="_blank">Karta</a></p>
                     </div>
-                    <div class="col-sm-1">
-                        <p><a href="https://www.facebook.com/BrezzaUppsala" target="_blank" class="fa fa-facebook-square"></a>
-                        <a href="https://www.instagram.com/brezza.se" target="_blank" class="fa fa-instagram" id="insta"></a></p>
+                    <div class="col-sm-3 footer-col-last">
+                        <p><a href="https://www.facebook.com/BrezzaUppsala" rel="noreferrer" target="_blank" class="fa fa-facebook-square"></a>
+                        <a href="https://www.instagram.com/brezza.se" rel="noreferrer" target="_blank" class="fa fa-instagram" id="insta"></a></p>
+                      <img class="AAA" src="./images/AAA.png" alt="Highest Credit Rating Bisnode"/>
                     </div>
                 </div>
             </div>
+          <img class="AAA-mobile" src="./images/AAA.png" alt="Highest Credit Rating Bisnode"/>
         </footer> 
 	</body>
 </html>
