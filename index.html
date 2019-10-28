@@ -143,6 +143,14 @@
                         data-toggle="collapse">Meny</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link smooth-scroll d-none d-sm-block"
+                        href="#VinprovningarAnchorDesktop">Vinprovningar</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#VinprovningarAnchor" class="nav-link smooth-scroll d-sm-none"
+                        data-target=".navbar-collapse" data-toggle="collapse">Vinprovningar</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link smooth-scroll d-none d-sm-block" href="#Galleri">Galleri</a>
                 </li>
                 <li class="nav-item">
@@ -208,16 +216,16 @@
 
             <!-- Nav pills -->
             <ul class="nav nav-pills">
-                <li class="nav-item col-4 col-sm-4">
+                <li class="nav-item col-3 col-sm-3">
                     <a class="nav-link active" data-toggle="pill" href="#Antipasti">Antipasti</a>
                 </li>
-                <li class="nav-item col-4 col-sm-4">
+                <li class="nav-item col-3 col-sm-3">
                     <a class="nav-link" data-toggle="pill" href="#Pasta">Pasta</a>
                 </li>
-                <li class="nav-item col-4 col-sm-4">
+                <li class="nav-item col-3 col-sm-3">
                     <a class="nav-link" data-toggle="pill" href="#Pizza">Pizza</a>
                 </li>
-                <li class="nav-item col-4 col-sm-4">
+                <li class="nav-item col-3 col-sm-3">
                     <a class="nav-link" data-toggle="pill" href="#Secondi">Secondi</a>
                 </li>
                 <li class="nav-item col-4 col-sm-4">
@@ -225,6 +233,9 @@
                 </li>
                 <li class="nav-item col-4 col-sm-4">
                     <a class="nav-link" data-toggle="pill" href="#Avsmakningsmeny">Avsmakning</a>
+                </li>
+                <li class="nav-item col-4 col-sm-4">
+                    <a class="nav-link" data-toggle="pill" href="#Vin">Vin</a>
                 </li>
             </ul>
 
@@ -366,7 +377,7 @@
                     </div>
                 </div>
                 <div id="Pizza" class="container tab-pane fade"><br>
-                    <h2>Pizza <span id="pizzarabatt"><br><i>På italienska ingredienser och färsk mozzarella<br>10%
+                    <h2>Pizza <span><br><i>På italienska ingredienser och färsk mozzarella<br>10%
                                 rabatt vid avhämtning</i></span></h2>
                     <div class="row">
                         <div class="col-sm-4">
@@ -456,7 +467,6 @@
                             </dl>
                         </div>
                     </div>
-
                 </div>
                 <div id="Dolci" class="container tab-pane fade"><br>
                     <h2>Dolci</h2>
@@ -521,6 +531,32 @@
                         </div>
                     </div>
                 </div>
+                <div id="Vin" class="container tab-pane fade"><br>
+                    <h2>Vin <span><br>
+                            Lite längre ner på sidan kan ni se våra vinprovningar
+                        </span>
+                    </h2>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <dl>
+                                <dt>Vinlista kommer snart<span class="pris"></span></dt>
+                                <dd></dd>
+                            </dl>
+                        </div>
+                        <div class="col-sm-4">
+                            <dl>
+                                <dt><span class="pris"></span></dt>
+                                <dd></dd>
+                            </dl>
+                        </div>
+                        <div class="col-sm-4">
+                            <dl>
+                                <dt><span class="pris"></span></dt>
+                                <dd></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -529,6 +565,8 @@
         <img class="tallrik" src="tallrik_guld.png" alt="logo" />
     </div>
 
+    <div id="VinprovningarAnchor"></div>
+    <div id="VinprovningarAnchorDesktop"></div>
     <div class="vinprovning" class="Bakgrund">
         <div id="vinprovning__anchor"></div>
         <div id="vinprovning__anchor--desktop"></div>
@@ -540,7 +578,8 @@
                 <div class="col-sm-4">
                     <div class="vin-distrikt">
                         <h2>-Valpolicella- </h2>
-                        <div>Valpolicella ligger i den italienska provinsen Verona i norra Italien och är mest känt för
+                        <div>Valpolicella ligger i den italienska provinsen Verona i norra Italien och är mest
+                            känt för
                             sina kraftiga röda viner där Amarone, Ripasso och Recioto är några av de mest kända
                             sorterna. </div>
                     </div>
@@ -548,14 +587,17 @@
                 <div class="col-sm-4">
                     <div class="vin-distrikt">
                         <h2>-Piemonte-</h2>
-                        <div>Piemonte är en region i nordvästra Italien och är känt för Barolo – ”Kungen av italienska
-                            viner” samt ett flertal andra klassiska vinsorter såsom Barbaresco och Moscato D'Asti </div>
+                        <div>Piemonte är en region i nordvästra Italien och är känt för Barolo – ”Kungen av
+                            italienska
+                            viner” samt ett flertal andra klassiska vinsorter såsom Barbaresco och Moscato
+                            D'Asti </div>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="vin-distrikt">
                         <h2>-Toscana-</h2>
-                        <div>Toscana är en välkänd vinregion för många svenskar. Chianti, Brunello di Montalcino och Vin
+                        <div>Toscana är en välkänd vinregion för många svenskar. Chianti, Brunello di Montalcino
+                            och Vin
                             Santo är några av Italiens mest respekterade vinsorter och alla görs i Toscana.
                         </div>
                     </div>
@@ -597,7 +639,6 @@
                 <h1>Galleri</h1>
             </div>
             <div class="row">
-
                 <div class="col-sm-4">
                     <img class="galleribild img-fluid" src="./images/Brezza4.jpg" alt="Vinkällare" />
                 </div>
@@ -609,7 +650,6 @@
                 </div>
             </div>
             <div class="row">
-
                 <div class="col-sm-4">
                     <img class="galleribild img-fluid" src="./images/Brezza9.jpg" alt="kassan" />
                 </div>
@@ -619,18 +659,14 @@
                 <div class="col-sm-4">
                     <img class="galleribild img-fluid" src="./images/Brezza11.jpg" alt="lilla salen" />
                 </div>
-
             </div>
         </div>
     </div>
-
-
 
     <div class="delare">
         <div class="linje"></div>
         <img class="tallrik" src="tallrik_guld.png" alt="logo" />
     </div>
-
 
     <div id="OmOssBakgrund">
         <div id="OmOssAnchor"></div>
@@ -643,18 +679,22 @@
                     <div class="lead">
                         <h1>Om Brezza</h1>
                     </div>
-                    <p id="Text">BREZZA betyder bris på italienska och vår tanke är att smakupplevelser ska färdas hit
+                    <p id="Text">BREZZA betyder bris på italienska och vår tanke är att smakupplevelser ska
+                        färdas hit
                         från Italien. BREZZA är också en nödvändig faktor i vinodling för vindruvornas
                         välbefinnande.</br></br>
 
-                        Vi är en italiensk restaurang och vinotek i centrala Uppsala med fokus på klassisk italiensk
+                        Vi är en italiensk restaurang och vinotek i centrala Uppsala med fokus på klassisk
+                        italiensk
                         matlagning med moderna influenser.</br></br>
 
                         Här kan du äta allt från <strong>charkuterier, ostar och vedugnsbakad pizza till á la
-                            carte</strong> med flera rätter på italienskt vis - eller endast ta ett glas vin från vår
+                            carte</strong> med flera rätter på italienskt vis - eller endast ta ett glas vin
+                        från vår
                         vinkällare.</br></br>
 
-                        Vi är mycket stolta över vår samling av viner från olika regioner av Italien, såsom Amarone,
+                        Vi är mycket stolta över vår samling av viner från olika regioner av Italien, såsom
+                        Amarone,
                         Barolo, Barbaresco, Brunello, Chianti m.m. Boka gärna en vinprovning i vår vinkällare.
                     </p>
                 </div>
@@ -675,14 +715,16 @@
 
                 <div class="col-sm-3">
                     <h3>ÖPPETTIDER</h3>
-                    <p>Måndag - Tisdag<br>16:30 - 22:00<br><br>Onsdag - Lördag<br>16:30 - 00:00<br><br>Söndag<br>16:30 -
+                    <p>Måndag - Tisdag<br>16:30 - 22:00<br><br>Onsdag - Lördag<br>16:30 -
+                        00:00<br><br>Söndag<br>16:30 -
                         22:00</p>
                 </div>
                 <div class="col-sm-3">
                     <h3 id="kontakt">KONTAKT</h3>
                     <p><a id="tele" href="tel:018 71 15 40"><i class="fa fa-phone"></i>
                             018&nbsp-&nbsp71&nbsp15&nbsp40</a>
-                        <br><a href="mailto:kontakt@brezza.se"><i class="fa fa-envelope-o"></i> kontakt@brezza.se </a>
+                        <br><a href="mailto:kontakt@brezza.se"><i class="fa fa-envelope-o"></i>
+                            kontakt@brezza.se </a>
                     </p>
                 </div>
                 <div class="col-sm-3">
