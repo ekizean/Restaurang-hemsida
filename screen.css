@@ -15,9 +15,9 @@ body {
 }
 
 .banner {
-  margin: 10px 0;
+  margin: 6px 0;
   width: 100%;
-  height: 170px;
+  height: 160px;
   background-color: rgb(169, 150, 107);
   display: flex;
   align-items: center;
@@ -25,9 +25,15 @@ body {
 }
 
 .banner__link {
-  font-size: 30px;
+  font-size: 22px;
   border: 1px solid rgb(17, 17, 17);
-  padding: 1px 38px;
+  padding: 2px 40px;
+  color: rgb(17, 17, 17);
+  text-transform: uppercase;
+}
+
+.banner__link:hover {
+  background-color: #c9c8bb;
   color: rgb(17, 17, 17);
 }
 
