@@ -15,14 +15,19 @@ body {
 }
 
 .take-away {
-  padding: 10px;
-  color: #212529;
+  padding: 8px;
   background-color: #c9c8bb;
   position: fixed;
   z-index: 30;
   bottom: 0px;
+  margin-bottom: 0;
   text-align: center;
   width: 100%;
+}
+
+.take-away_text {
+  font-size: 15px;
+  color: #212529
 }
 
 .star {
