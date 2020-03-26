@@ -25,6 +25,10 @@ body {
   width: 100%;
 }
 
+.star {
+  height: 19px;
+}
+
 .lower-case {
   text-transform: lowercase;
 }
