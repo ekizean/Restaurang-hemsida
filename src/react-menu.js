@@ -1,4 +1,5 @@
 "use strict";
+import menu from "../menu.js";
 
 class ReactMenu extends React.Component {
   constructor(props) {
@@ -79,49 +80,26 @@ class ReactMenu extends React.Component {
             </button>
           </div>
         </div>
-        <CourseMenu />
+        <CourseMenu
+          course={this.state.course.toLowerCase()}
+          dishes={menu[this.state.course.toLowerCase()]}
+        />
       </div>
     );
   }
 }
 
-const antipasti = [
-  {
-    courseName: "Bruschetta",
-    price: 110,
-    description: "Citronmarinerad zucchini och tomater",
-  },
-  {
-    courseName: "Mozzarella di Bufala Campana",
-    price: 135,
-    description: "Buffelmozzarella med tomater, aubergine och basilika",
-  },
-  {
-    courseName: "San Daniele con mozzarella",
-    price: 185,
-    description: "Lufttorkad skinka, buffelmozzarella tomat och basilika",
-  },
-  {
-    courseName: "Piatto misto di salumi",
-    price: 165,
-    description:
-      "Blandad chark, marinerade oliver, rostade hasselnötter och picklade grönsaker",
-  },
-];
-
-const CourseMenu = () => {
-  function chunkArray(array, chunkSize) {}
-
+const CourseMenu = ({ course, dishes }) => {
   const groupSize = 3;
 
-  const rows = antipasti
-    .map((course) => {
-      const { courseName, price, description } = course;
+  const rows = dishes
+    .map((dish) => {
+      const { dishName, price, description } = dish;
       return (
         <div className="col-sm-4">
           <dl>
             <dt>
-              {courseName}
+              {dishName}
               <span class="pris">{price}:-</span>
             </dt>
             <dd>{description}</dd>
@@ -149,7 +127,7 @@ const CourseMenu = () => {
 
   return (
     <div className="tab-content">
-      <h2>Antipasti</h2>
+      <h2>{course}</h2>
       {rows}
     </div>
   );

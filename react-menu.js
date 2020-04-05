@@ -8,6 +8,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+import menu from "../menu.js";
+
 var ReactMenu = function (_React$Component) {
   _inherits(ReactMenu, _React$Component);
 
@@ -114,7 +116,10 @@ var ReactMenu = function (_React$Component) {
             )
           )
         ),
-        React.createElement(CourseMenu, null)
+        React.createElement(CourseMenu, {
+          course: this.state.course.toLowerCase(),
+          dishes: menu[this.state.course.toLowerCase()]
+        })
       );
     }
   }]);
@@ -122,33 +127,16 @@ var ReactMenu = function (_React$Component) {
   return ReactMenu;
 }(React.Component);
 
-var antipasti = [{
-  courseName: "Bruschetta",
-  price: 110,
-  description: "Citronmarinerad zucchini och tomater"
-}, {
-  courseName: "Mozzarella di Bufala Campana",
-  price: 135,
-  description: "Buffelmozzarella med tomater, aubergine och basilika"
-}, {
-  courseName: "San Daniele con mozzarella",
-  price: 185,
-  description: "Lufttorkad skinka, buffelmozzarella tomat och basilika"
-}, {
-  courseName: "Piatto misto di salumi",
-  price: 165,
-  description: "Blandad chark, marinerade oliver, rostade hasselnötter och picklade grönsaker"
-}];
-
-var CourseMenu = function CourseMenu() {
-  function chunkArray(array, chunkSize) {}
+var CourseMenu = function CourseMenu(_ref) {
+  var course = _ref.course,
+      dishes = _ref.dishes;
 
   var groupSize = 3;
 
-  var rows = antipasti.map(function (course) {
-    var courseName = course.courseName,
-        price = course.price,
-        description = course.description;
+  var rows = dishes.map(function (dish) {
+    var dishName = dish.dishName,
+        price = dish.price,
+        description = dish.description;
 
     return React.createElement(
       "div",
@@ -159,7 +147,7 @@ var CourseMenu = function CourseMenu() {
         React.createElement(
           "dt",
           null,
-          courseName,
+          dishName,
           React.createElement(
             "span",
             { "class": "pris" },
@@ -201,7 +189,7 @@ var CourseMenu = function CourseMenu() {
     React.createElement(
       "h2",
       null,
-      "Antipasti"
+      course
     ),
     rows
   );
