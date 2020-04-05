@@ -47,6 +47,7 @@
     <link href="bootstrap-4.0.0-dist/css/bootstrap.css" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="screen.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="react-menu.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -111,7 +112,8 @@
             Boka bord
         </a>
         <a id="bokabord" class="bokabord"
-            href="https://cloud.caspeco.se/public/webBooking?system=se_breupp&unitId=14&onlineorder=true">Avhämtning 20%</a>
+            href="https://cloud.caspeco.se/public/webBooking?system=se_breupp&unitId=14&onlineorder=true">Avhämtning
+            20%</a>
     </header>
     <nav class="navbar navbar-expand-xl bg-dark navbar-dark fixed-top justify-content-xl-center" id="top-nav">
 
@@ -187,7 +189,8 @@
         </div>
     </nav>
     <div id="MenyBakgrund">
-        <p class="take-away"> <a class="take-away_text" href="#MenyAnchor"> Vi har just nu 20% på avhämtning av samtliga maträtter</a>
+        <p class="take-away"> <a class="take-away_text" href="#MenyAnchor"> Vi har just nu 20% på avhämtning av samtliga
+                maträtter</a>
         </p>
         <div id="MenyAnchor"></div>
         <div id="MenyAnchorDesktop"></div>
@@ -224,8 +227,15 @@
                     <a class="nav-link" data-toggle="pill" href="#Vin">Vin</a>
                 </li>
             </ul>
-
             <!-- Tab panes -->
+
+            <!-- React -->
+            <div id="react-menu"></div>
+            <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+            <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+            <script src="react-menu.js"></script>
+            <!-- End of React-->
+
             <div class="tab-content">
                 <div id="Antipasti" class="container tab-pane active"><br>
                     <h2>Antipasti</h2>
@@ -313,7 +323,6 @@
                             </dl>
                         </div>
                         <div class="col-sm-4">
-
                         </div>
                     </div>
                 </div>
@@ -390,7 +399,8 @@
                         <div class="col-sm-4">
                             <dl>
                                 <dt>Inferno<span class="pris">145:-</span></dt>
-                                <dd>Salami Piccante, färsk chili, tomatsås, mozzarella, oliver, ricotta, pinjenötter & basilika
+                                <dd>Salami Piccante, färsk chili, tomatsås, mozzarella, oliver, ricotta, pinjenötter &
+                                    basilika
                                 </dd>
                             </dl>
                         </div>
@@ -411,13 +421,15 @@
                         <div class="col-sm-4">
                             <dl>
                                 <dt>Trentino<span class="pris">165:-</span></dt>
-                                <dd>Prosciutto San Daniele, tomatsås, mozzarella, ruccola, soltorkade tomater & Parmigiano-Reggiano</dd>
+                                <dd>Prosciutto San Daniele, tomatsås, mozzarella, ruccola, soltorkade tomater &
+                                    Parmigiano-Reggiano</dd>
                             </dl>
                         </div>
                         <div class="col-sm-4">
                             <dl>
                                 <dt>Giardino Bianco<span class="pris">155:-</span></dt>
-                                <dd>Potatis, ägg, lök, soltorkade tomater, ruccola, basilikaolja & Parmigiano-Reggiano</dd>
+                                <dd>Potatis, ägg, lök, soltorkade tomater, ruccola, basilikaolja & Parmigiano-Reggiano
+                                </dd>
                             </dl>
                         </div>
                         <div class="col-sm-4">
@@ -431,7 +443,8 @@
                         <div class="col-sm-4">
                             <dl>
                                 <dt>Quattro Formaggi<span class="pris">165:-</span></dt>
-                                <dd>Gorgonzola, pecorino, mozzarella, Parmigiano-Reggiano, soltorkade tomater & pinjenötter
+                                <dd>Gorgonzola, pecorino, mozzarella, Parmigiano-Reggiano, soltorkade tomater &
+                                    pinjenötter
                                 </dd>
                             </dl>
                         </div>
@@ -460,7 +473,8 @@
                         <div class="col-sm-4">
                             <dl>
                                 <dt>Ragu di Coniglio<span class="pris">225:-</span></dt>
-                                <dd>Tagliatelle med kanin, morot, oliver, kapris, vitlök, vitt vin och Parmigiano-Reggiano
+                                <dd>Tagliatelle med kanin, morot, oliver, kapris, vitlök, vitt vin och
+                                    Parmigiano-Reggiano
                                 </dd>
                             </dl>
                         </div>
@@ -469,7 +483,8 @@
                         <div class="col-sm-4">
                             <dl>
                                 <dt>Gnocchi di casa Brezza<span class="pris">185:-</span></dt>
-                                <dd>Gnocchi, salsicciafärs, 'nduja calabrese, soltorkade tomater och Parmigiano-Reggiano</dd>
+                                <dd>Gnocchi, salsicciafärs, 'nduja calabrese, soltorkade tomater och Parmigiano-Reggiano
+                                </dd>
                             </dl>
                         </div>
                         <div class="col-sm-4">
@@ -529,7 +544,8 @@
                         <div class="col-sm-4">
                             <dl>
                                 <dt>Gelato/Sorbetto<span class="pris">45:-</span></dt>
-                                <dd>Välj mellan fyra hemgjorda glassar; vaniljglass, chokladglass, jordgubbglass eller blodapelsinsorbet</dd>
+                                <dd>Välj mellan fyra hemgjorda glassar; vaniljglass, chokladglass, jordgubbglass eller
+                                    blodapelsinsorbet</dd>
                             </dl>
                         </div>
                         <div class="col-sm-4">

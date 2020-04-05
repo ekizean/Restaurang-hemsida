@@ -1,0 +1,30 @@
+.course-navigator {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.course-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.course-button {
+  color: rgb(169, 150, 107);
+  background-color: rgb(22, 42, 37);
+  text-transform: uppercase;
+  border-radius: 0.25rem;
+  border: none;
+  padding: 8px 20px;
+  font-size: 0.8rem;
+  margin: 0 1px 2px 1px;
+}
+
+.course-button:focus {
+  outline: 0;
+}
+
+.selected {
+  color: #c9c8bb;
+  background-color: #580000;
+}
