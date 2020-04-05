@@ -31,91 +31,181 @@ var ReactMenu = function (_React$Component) {
 
       return React.createElement(
         "div",
-        { className: "course-navigator" },
+        { className: "menu" },
         React.createElement(
           "div",
-          { className: "course-row" },
+          { className: "course-navigator" },
           React.createElement(
-            "button",
-            {
-              className: "course-button" + (this.state.course.toLowerCase() == "antipasti" ? " selected" : ""),
-              onClick: function onClick() {
-                return _this2.clickOnCourseButton(event.target.innerText);
-              }
-            },
-            "Antipasti"
+            "div",
+            { className: "course-row" },
+            React.createElement(
+              "button",
+              {
+                className: "course-button" + (this.state.course.toLowerCase() == "antipasti" ? " selected" : ""),
+                onClick: function onClick() {
+                  return _this2.clickOnCourseButton(event.target.innerText);
+                }
+              },
+              "Antipasti"
+            ),
+            React.createElement(
+              "button",
+              {
+                className: "course-button" + (this.state.course.toLowerCase() == "pasta" ? " selected" : ""),
+                onClick: function onClick() {
+                  return _this2.clickOnCourseButton(event.target.innerText);
+                }
+              },
+              "Pasta"
+            ),
+            React.createElement(
+              "button",
+              {
+                className: "course-button" + (this.state.course.toLowerCase() == "pizza" ? " selected" : ""),
+                onClick: function onClick() {
+                  return _this2.clickOnCourseButton(event.target.innerText);
+                }
+              },
+              "Pizza"
+            ),
+            React.createElement(
+              "button",
+              {
+                className: "course-button" + (this.state.course.toLowerCase() == "secondi" ? " selected" : ""),
+                onClick: function onClick() {
+                  return _this2.clickOnCourseButton(event.target.innerText);
+                }
+              },
+              "Secondi"
+            )
           ),
           React.createElement(
-            "button",
-            {
-              className: "course-button" + (this.state.course.toLowerCase() == "pasta" ? " selected" : ""),
-              onClick: function onClick() {
-                return _this2.clickOnCourseButton(event.target.innerText);
-              }
-            },
-            "Pasta"
-          ),
-          React.createElement(
-            "button",
-            {
-              className: "course-button" + (this.state.course.toLowerCase() == "pizza" ? " selected" : ""),
-              onClick: function onClick() {
-                return _this2.clickOnCourseButton(event.target.innerText);
-              }
-            },
-            "Pizza"
-          ),
-          React.createElement(
-            "button",
-            {
-              className: "course-button" + (this.state.course.toLowerCase() == "secondi" ? " selected" : ""),
-              onClick: function onClick() {
-                return _this2.clickOnCourseButton(event.target.innerText);
-              }
-            },
-            "Secondi"
+            "div",
+            { className: "course-row" },
+            React.createElement(
+              "button",
+              {
+                className: "course-button" + (this.state.course.toLowerCase() == "dolci" ? " selected" : ""),
+                onClick: function onClick() {
+                  return _this2.clickOnCourseButton(event.target.innerText);
+                }
+              },
+              "Dolci"
+            ),
+            React.createElement(
+              "button",
+              {
+                className: "course-button" + (this.state.course.toLowerCase() == "avsmakning" ? " selected" : ""),
+                onClick: function onClick() {
+                  return _this2.clickOnCourseButton(event.target.innerText);
+                }
+              },
+              "Avsmakning"
+            ),
+            React.createElement(
+              "button",
+              {
+                className: "course-button" + (this.state.course.toLowerCase() == "vin" ? " selected" : ""),
+                onClick: function onClick() {
+                  return _this2.clickOnCourseButton(event.target.innerText);
+                }
+              },
+              "Vin"
+            )
           )
         ),
-        React.createElement(
-          "div",
-          { className: "course-row" },
-          React.createElement(
-            "button",
-            {
-              className: "course-button" + (this.state.course.toLowerCase() == "dolci" ? " selected" : ""),
-              onClick: function onClick() {
-                return _this2.clickOnCourseButton(event.target.innerText);
-              }
-            },
-            "Dolci"
-          ),
-          React.createElement(
-            "button",
-            {
-              className: "course-button" + (this.state.course.toLowerCase() == "avsmakning" ? " selected" : ""),
-              onClick: function onClick() {
-                return _this2.clickOnCourseButton(event.target.innerText);
-              }
-            },
-            "Avsmakning"
-          ),
-          React.createElement(
-            "button",
-            {
-              className: "course-button" + (this.state.course.toLowerCase() == "vin" ? " selected" : ""),
-              onClick: function onClick() {
-                return _this2.clickOnCourseButton(event.target.innerText);
-              }
-            },
-            "Vin"
-          )
-        )
+        React.createElement(CourseMenu, null)
       );
     }
   }]);
 
   return ReactMenu;
 }(React.Component);
+
+var antipasti = [{
+  courseName: "Bruschetta",
+  price: 110,
+  description: "Citronmarinerad zucchini och tomater"
+}, {
+  courseName: "Mozzarella di Bufala Campana",
+  price: 135,
+  description: "Buffelmozzarella med tomater, aubergine och basilika"
+}, {
+  courseName: "San Daniele con mozzarella",
+  price: 185,
+  description: "Lufttorkad skinka, buffelmozzarella tomat och basilika"
+}, {
+  courseName: "Piatto misto di salumi",
+  price: 165,
+  description: "Blandad chark, marinerade oliver, rostade hasselnötter och picklade grönsaker"
+}];
+
+var CourseMenu = function CourseMenu() {
+  function chunkArray(array, chunkSize) {}
+
+  var groupSize = 3;
+
+  var rows = antipasti.map(function (course) {
+    var courseName = course.courseName,
+        price = course.price,
+        description = course.description;
+
+    return React.createElement(
+      "div",
+      { className: "col-sm-4" },
+      React.createElement(
+        "dl",
+        null,
+        React.createElement(
+          "dt",
+          null,
+          courseName,
+          React.createElement(
+            "span",
+            { "class": "pris" },
+            price,
+            ":-"
+          )
+        ),
+        React.createElement(
+          "dd",
+          null,
+          description
+        )
+      )
+    );
+  }).reduce(function (acc, curr, index, array) {
+    index % groupSize === 0 && acc.push([]);
+    acc[acc.length - 1].push(curr);
+
+    var isLastElement = array.length - index == 1;
+    if (isLastElement) {
+      var numberOfEmptyColSm4ToAddInTheLastRow = groupSize % array.length;
+      for (var i = 0; i < numberOfEmptyColSm4ToAddInTheLastRow; i++) {
+        acc[acc.length - 1].push(React.createElement("div", { className: "col-sm-4" }));
+      }
+    }
+
+    return acc;
+  }, []).map(function (rowContent) {
+    return React.createElement(
+      "div",
+      { className: "row" },
+      rowContent
+    );
+  });
+
+  return React.createElement(
+    "div",
+    { className: "tab-content" },
+    React.createElement(
+      "h2",
+      null,
+      "Antipasti"
+    ),
+    rows
+  );
+};
 
 var domContainer = document.querySelector("#react-menu");
 ReactDOM.render(React.createElement(ReactMenu, null), domContainer);
