@@ -2,6 +2,34 @@
   margin: 20px 0;
 }
 
+.package-menu--dish {
+  margin: 13px 0;
+}
+
+.package-menu--box {
+  margin-top: 15px;
+  border: 1px rgb(169, 150, 107) solid;
+  padding: 16px;
+}
+
+.gold {
+  color: rgb(169, 150, 107);
+}
+
+.wine-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.wine-description {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.wine-list {
+  margin-top: 27px;
+}
+
 @media only screen and (max-width: 700px) {
   .dish {
     margin: 8px 0;

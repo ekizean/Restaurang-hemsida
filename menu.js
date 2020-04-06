@@ -62,17 +62,33 @@ export default {
 
   avsmakning: [
     {
-      dishName: "Pizza",
-      price: 185,
-      description: "della italia",
+      packageName: "Tre rätter",
+      price: 515,
+      disches: [
+        "halstrade pilgrimsmusslor",
+        "lammytterfilé eller zuppa di mare",
+        "tiramisu",
+      ],
+      wineName: "Vinpaket",
+      winePrice: 395,
+    },
+    {
+      packageName: "Sju rätter",
+      price: 785,
+      description: "minst två personer",
+      disches: [
+        "piatto piatto misto di salumi",
+        "carpaccio på helleflundra",
+        "ragu di coniglio",
+        "osso buco",
+        "sorbetto con limoncino",
+        "zuppa di mare",
+        "citronzabaglione",
+      ],
+      wineName: "Vinpaket",
+      winePrice: 825,
     },
   ],
 
-  vin: [
-    {
-      dishName: "Pizza",
-      price: 185,
-      description: "della italia",
-    },
-  ],
+  vin: { isWine: true },
 };

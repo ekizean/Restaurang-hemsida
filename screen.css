@@ -38,11 +38,6 @@ body {
   text-transform: lowercase;
 }
 
-.paket {
-  border: 1px rgb(169, 150, 107) solid;
-  padding: 16px;
-}
-
 p {
   font-size: 17px;
   color: #c9c8bb;

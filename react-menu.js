@@ -131,58 +131,145 @@ var CourseMenu = function CourseMenu(_ref) {
   var course = _ref.course,
       dishes = _ref.dishes;
 
-  var groupSize = 3;
+  function getDishMarkup(dish) {
+    if (dish.packageName) {
+      var packageName = dish.packageName,
+          price = dish.price,
+          description = dish.description,
+          disches = dish.disches,
+          wineName = dish.wineName,
+          winePrice = dish.winePrice;
 
-  var rows = dishes.map(function (dish) {
-    var dishName = dish.dishName,
-        price = dish.price,
-        description = dish.description;
 
-    return React.createElement(
-      "div",
-      { className: "col-sm-4 dish" },
-      React.createElement(
-        "dl",
-        null,
+      return React.createElement(
+        "div",
+        { "class": "col-sm-4" },
         React.createElement(
-          "dt",
-          null,
-          dishName,
+          "dl",
+          { "class": "package-menu--box" },
           React.createElement(
-            "span",
-            { "class": "pris" },
-            price,
-            ":-"
+            "dt",
+            null,
+            packageName,
+            React.createElement(
+              "span",
+              { "class": "pris" },
+              price,
+              ":-"
+            )
+          ),
+          React.createElement(
+            "dd",
+            null,
+            React.createElement(
+              "span",
+              { "class": "lower-case gold" },
+              description && React.createElement(
+                "i",
+                null,
+                description
+              )
+            ),
+            disches.map(function (dish) {
+              return React.createElement(
+                "div",
+                { "class": "package-menu--dish" },
+                dish
+              );
+            })
+          ),
+          React.createElement(
+            "dt",
+            null,
+            wineName,
+            React.createElement(
+              "span",
+              { "class": "pris" },
+              winePrice,
+              ":-"
+            )
           )
-        ),
-        React.createElement(
-          "dd",
-          null,
-          description
         )
+      );
+    } else {
+      var dishName = dish.dishName,
+          _price = dish.price,
+          _description = dish.description;
+
+      return React.createElement(
+        "div",
+        { className: "col-sm-4 dish" },
+        React.createElement(
+          "dl",
+          null,
+          React.createElement(
+            "dt",
+            null,
+            dishName,
+            React.createElement(
+              "span",
+              { "class": "pris" },
+              _price,
+              ":-"
+            )
+          ),
+          React.createElement(
+            "dd",
+            null,
+            _description
+          )
+        )
+      );
+    }
+  }
+
+  var groupSize = 3;
+  var showingContent = void 0;
+
+  if (course === "vin") {
+    showingContent = React.createElement(
+      "div",
+      { className: "wine-content" },
+      React.createElement(
+        "span",
+        { className: "wine-description gold lower-case" },
+        "lite l\xE4ngre ner p\xE5 sidan kan ni se v\xE5ra vinprovningar"
+      ),
+      React.createElement(
+        "a",
+        { className: "wine-list", href: "./Brezza vinlista.pdf" },
+        "Vinlista"
       )
     );
-  }).reduce(function (acc, curr, index, array) {
-    index % groupSize === 0 && acc.push([]);
-    acc[acc.length - 1].push(curr);
-    return acc;
-  }, []).map(function (rowContent) {
-    return React.createElement(
-      "div",
-      { className: "row" },
-      rowContent
-    );
-  });
+  } else {
+    showingContent = dishes.map(function (dish) {
+      return getDishMarkup(dish);
+    }).reduce(function (acc, curr, index) {
+      index % groupSize === 0 && acc.push([]);
+      acc[acc.length - 1].push(curr);
+      return acc;
+    }, []).map(function (rowContent) {
+      return React.createElement(
+        "div",
+        { className: "row" },
+        rowContent
+      );
+    });
+  }
 
   return React.createElement(
     "div",
     { className: "tab-content" },
     React.createElement(
-      "h2",
-      null,
-      course
-    ),
-    rows
+      "div",
+      { className: "container" },
+      React.createElement(
+        "h2",
+        null,
+        course
+      ),
+      showingContent
+    )
   );
 };
 
