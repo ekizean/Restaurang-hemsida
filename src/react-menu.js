@@ -96,7 +96,7 @@ const CourseMenu = ({ course, dishes }) => {
     .map((dish) => {
       const { dishName, price, description } = dish;
       return (
-        <div className="col-sm-4">
+        <div className="col-sm-4 dish">
           <dl>
             <dt>
               {dishName}

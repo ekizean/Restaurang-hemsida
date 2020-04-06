@@ -27,7 +27,7 @@ body {
 
 .take-away_text {
   font-size: 15px;
-  color: #212529
+  color: #212529;
 }
 
 .star {
@@ -93,9 +93,11 @@ header {
   justify-content: center;
   align-items: center;
   background-color: rgb(17, 17, 17);
-  background-image: linear-gradient(to right,
+  background-image: linear-gradient(
+      to right,
       rgba(0, 0, 0, 0.35),
-      rgba(0, 0, 0, 0.35)),
+      rgba(0, 0, 0, 0.35)
+    ),
     url("./images/102 Brezza.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -133,10 +135,6 @@ h1 {
   min-height: 300px;
   margin-bottom: 35px;
   margin-top: 50px;
-}
-
-.tab-content .col-sm-4 {
-  margin: 20px auto;
 }
 
 .navbar-collapse {
@@ -195,10 +193,6 @@ h1 {
   margin-top: 50px;
 }
 
-.disches {
-  margin-top: 10px;
-}
-
 dd {
   padding-right: 50px;
 }
@@ -211,7 +205,7 @@ li.nav-item {
 
 /* Meny till maträtterna*/
 .nav-pills .nav-link.active,
-.nav-pills .show>.nav-link {
+.nav-pills .show > .nav-link {
   /* Copy paste från inspector mode */
   color: #c9c8bb;
   background-color: #580000;
@@ -469,9 +463,11 @@ a:hover {
   }
 
   header {
-    background-image: linear-gradient(to right,
+    background-image: linear-gradient(
+        to right,
         rgba(0, 0, 0, 0.35),
-        rgba(0, 0, 0, 0.35)),
+        rgba(0, 0, 0, 0.35)
+      ),
       url("./images/102 Brezza mobil.jpg");
   }
 
@@ -525,10 +521,6 @@ a:hover {
     padding-top: 70px;
   }
 
-  .tab-content .col-sm-4 {
-    margin: 8px auto;
-  }
-
   #Meny a {
     font-size: 0.8rem;
   }
@@ -579,7 +571,7 @@ a:hover {
     width: 100%;
   }
 
-  footer>.container {
+  footer > .container {
     padding-right: 0px;
   }
 }

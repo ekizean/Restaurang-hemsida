@@ -22,7 +22,53 @@ export default {
         "Blandad chark, marinerade oliver, rostade hasselnötter och picklade grönsaker",
     },
   ],
+
+  pasta: [
+    {
+      dishName: "Pizza",
+      price: 185,
+      description: "della italia",
+    },
+  ],
+
   pizza: [
+    {
+      dishName: "Pizza",
+      price: 185,
+      description: "della italia",
+    },
+    {
+      dishName: "Pizza",
+      price: 185,
+      description: "della italia",
+    },
+  ],
+
+  secondi: [
+    {
+      dishName: "Pizza",
+      price: 185,
+      description: "della italia",
+    },
+  ],
+
+  dolci: [
+    {
+      dishName: "Pizza",
+      price: 185,
+      description: "della italia",
+    },
+  ],
+
+  avsmakning: [
+    {
+      dishName: "Pizza",
+      price: 185,
+      description: "della italia",
+    },
+  ],
+
+  vin: [
     {
       dishName: "Pizza",
       price: 185,

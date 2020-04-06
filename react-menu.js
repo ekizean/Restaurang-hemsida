@@ -140,7 +140,7 @@ var CourseMenu = function CourseMenu(_ref) {
 
     return React.createElement(
       "div",
-      { className: "col-sm-4" },
+      { className: "col-sm-4 dish" },
       React.createElement(
         "dl",
         null,
