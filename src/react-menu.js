@@ -110,15 +110,6 @@ const CourseMenu = ({ course, dishes }) => {
     .reduce((acc, curr, index, array) => {
       index % groupSize === 0 && acc.push([]);
       acc[acc.length - 1].push(curr);
-
-      const isLastElement = array.length - index == 1;
-      if (isLastElement) {
-        const numberOfEmptyColSm4ToAddInTheLastRow = groupSize % array.length;
-        for (let i = 0; i < numberOfEmptyColSm4ToAddInTheLastRow; i++) {
-          acc[acc.length - 1].push(<div className="col-sm-4"></div>);
-        }
-      }
-
       return acc;
     }, [])
     .map((rowContent) => {

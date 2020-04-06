@@ -165,15 +165,6 @@ var CourseMenu = function CourseMenu(_ref) {
   }).reduce(function (acc, curr, index, array) {
     index % groupSize === 0 && acc.push([]);
     acc[acc.length - 1].push(curr);
-
-    var isLastElement = array.length - index == 1;
-    if (isLastElement) {
-      var numberOfEmptyColSm4ToAddInTheLastRow = groupSize % array.length;
-      for (var i = 0; i < numberOfEmptyColSm4ToAddInTheLastRow; i++) {
-        acc[acc.length - 1].push(React.createElement("div", { className: "col-sm-4" }));
-      }
-    }
-
     return acc;
   }, []).map(function (rowContent) {
     return React.createElement(
