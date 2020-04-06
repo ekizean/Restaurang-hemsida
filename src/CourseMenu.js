@@ -77,11 +77,22 @@ const CourseMenu = ({ course, dishes }) => {
       });
   }
 
+  const courseDescriptionPasta = (
+    <i class="lower-case gold">brezzas hemgjorda pasta</i>
+  );
+  const courseDescriptionPizza = (
+    <i class="lower-case gold">
+      på italienska ingredienser och färsk mozzarella
+    </i>
+  );
+
   return (
     <div className="tab-content">
       <div className="container">
         <h2>{course}</h2>
-        {showingContent}
+        {course == "pasta" && courseDescriptionPasta}
+        {course == "pizza" && courseDescriptionPizza}
+        <div class="menu-content">{showingContent}</div>
       </div>
     </div>
   );

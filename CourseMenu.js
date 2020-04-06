@@ -128,6 +128,17 @@ var CourseMenu = function CourseMenu(_ref) {
     });
   }
 
+  var courseDescriptionPasta = React.createElement(
+    "i",
+    { "class": "lower-case gold" },
+    "brezzas hemgjorda pasta"
+  );
+  var courseDescriptionPizza = React.createElement(
+    "i",
+    { "class": "lower-case gold" },
+    "p\xE5 italienska ingredienser och f\xE4rsk mozzarella"
+  );
+
   return React.createElement(
     "div",
     { className: "tab-content" },
@@ -139,7 +150,13 @@ var CourseMenu = function CourseMenu(_ref) {
         null,
         course
       ),
-      showingContent
+      course == "pasta" && courseDescriptionPasta,
+      course == "pizza" && courseDescriptionPizza,
+      React.createElement(
+        "div",
+        { "class": "menu-content" },
+        showingContent
+      )
     )
   );
 };
