@@ -11,23 +11,23 @@ const CourseMenu = ({ course, dishes }) => {
       } = dish;
 
       return (
-        <div class="col-sm-4">
-          <dl class="package-menu--box">
+        <div className="col-sm-4">
+          <dl className="package-menu--box">
             <dt>
               {packageName}
-              <span class="pris">{price}:-</span>
+              <span className="pris">{price}:-</span>
             </dt>
             <dd>
-              <span class="lower-case gold">
+              <span className="lower-case gold">
                 {description && <i>{description}</i>}
               </span>
               {disches.map((dish) => {
-                return <div class="package-menu--dish">{dish}</div>;
+                return <div className="package-menu--dish">{dish}</div>;
               })}
             </dd>
             <dt>
               {wineName}
-              <span class="pris">{winePrice}:-</span>
+              <span className="pris">{winePrice}:-</span>
             </dt>
           </dl>
         </div>
@@ -39,7 +39,7 @@ const CourseMenu = ({ course, dishes }) => {
           <dl>
             <dt>
               {dishName}
-              <span class="pris">{price}:-</span>
+              <span className="pris">{price}:-</span>
             </dt>
             <dd>{description}</dd>
           </dl>
@@ -78,10 +78,10 @@ const CourseMenu = ({ course, dishes }) => {
   }
 
   const courseDescriptionPasta = (
-    <i class="lower-case gold">brezzas hemgjorda pasta</i>
+    <i className="lower-case gold">brezzas hemgjorda pasta</i>
   );
   const courseDescriptionPizza = (
-    <i class="lower-case gold">
+    <i className="lower-case gold">
       på italienska ingredienser och färsk mozzarella
     </i>
   );
@@ -92,7 +92,7 @@ const CourseMenu = ({ course, dishes }) => {
         <h2>{course}</h2>
         {course == "pasta" && courseDescriptionPasta}
         {course == "pizza" && courseDescriptionPizza}
-        <div class="menu-content">{showingContent}</div>
+        <div className="menu-content">{showingContent}</div>
       </div>
     </div>
   );

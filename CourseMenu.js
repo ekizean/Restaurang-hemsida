@@ -14,17 +14,17 @@ var CourseMenu = function CourseMenu(_ref) {
 
       return React.createElement(
         "div",
-        { "class": "col-sm-4" },
+        { className: "col-sm-4" },
         React.createElement(
           "dl",
-          { "class": "package-menu--box" },
+          { className: "package-menu--box" },
           React.createElement(
             "dt",
             null,
             packageName,
             React.createElement(
               "span",
-              { "class": "pris" },
+              { className: "pris" },
               price,
               ":-"
             )
@@ -34,7 +34,7 @@ var CourseMenu = function CourseMenu(_ref) {
             null,
             React.createElement(
               "span",
-              { "class": "lower-case gold" },
+              { className: "lower-case gold" },
               description && React.createElement(
                 "i",
                 null,
@@ -44,7 +44,7 @@ var CourseMenu = function CourseMenu(_ref) {
             disches.map(function (dish) {
               return React.createElement(
                 "div",
-                { "class": "package-menu--dish" },
+                { className: "package-menu--dish" },
                 dish
               );
             })
@@ -55,7 +55,7 @@ var CourseMenu = function CourseMenu(_ref) {
             wineName,
             React.createElement(
               "span",
-              { "class": "pris" },
+              { className: "pris" },
               winePrice,
               ":-"
             )
@@ -79,7 +79,7 @@ var CourseMenu = function CourseMenu(_ref) {
             dishName,
             React.createElement(
               "span",
-              { "class": "pris" },
+              { className: "pris" },
               _price,
               ":-"
             )
@@ -130,12 +130,12 @@ var CourseMenu = function CourseMenu(_ref) {
 
   var courseDescriptionPasta = React.createElement(
     "i",
-    { "class": "lower-case gold" },
+    { className: "lower-case gold" },
     "brezzas hemgjorda pasta"
   );
   var courseDescriptionPizza = React.createElement(
     "i",
-    { "class": "lower-case gold" },
+    { className: "lower-case gold" },
     "p\xE5 italienska ingredienser och f\xE4rsk mozzarella"
   );
 
@@ -154,7 +154,7 @@ var CourseMenu = function CourseMenu(_ref) {
       course == "pizza" && courseDescriptionPizza,
       React.createElement(
         "div",
-        { "class": "menu-content" },
+        { className: "menu-content" },
         showingContent
       )
     )
