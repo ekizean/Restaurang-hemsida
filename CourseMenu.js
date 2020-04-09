@@ -8,7 +8,7 @@ var CourseMenu = function CourseMenu(_ref) {
       var packageName = dish.packageName,
           price = dish.price,
           description = dish.description,
-          disches = dish.disches,
+          dishName = dish.dishName,
           wineName = dish.wineName,
           winePrice = dish.winePrice;
 
@@ -42,7 +42,7 @@ var CourseMenu = function CourseMenu(_ref) {
                 description
               )
             ),
-            disches.map(function (dish) {
+            dishName.map(function (dish) {
               return React.createElement(
                 "div",
                 { className: "package-menu--dish" },
@@ -64,7 +64,7 @@ var CourseMenu = function CourseMenu(_ref) {
         )
       );
     } else {
-      var dishName = dish.dishName,
+      var _dishName = dish.dishName,
           _price = dish.price,
           _description = dish.description;
 
@@ -77,7 +77,7 @@ var CourseMenu = function CourseMenu(_ref) {
           React.createElement(
             "dt",
             null,
-            dishName,
+            _dishName,
             React.createElement(
               "span",
               { className: "pris" },

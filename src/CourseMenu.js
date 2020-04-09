@@ -7,7 +7,7 @@ const CourseMenu = ({ dishes }) => {
         packageName,
         price,
         description,
-        disches,
+        dishName,
         wineName,
         winePrice,
       } = dish;
@@ -23,7 +23,7 @@ const CourseMenu = ({ dishes }) => {
               <span className="lower-case gold">
                 {description && <i>{description}</i>}
               </span>
-              {disches.map((dish) => {
+              {dishName.map((dish) => {
                 return <div className="package-menu--dish">{dish}</div>;
               })}
             </dd>

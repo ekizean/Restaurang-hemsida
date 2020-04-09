@@ -62,7 +62,7 @@ export default [
   {
     packageName: "Tre rätter",
     price: 515,
-    disches: [
+    dishName: [
       "halstrade pilgrimsmusslor",
       "lammytterfilé eller zuppa di mare",
       "tiramisu",
@@ -75,7 +75,7 @@ export default [
     packageName: "Sju rätter",
     price: 785,
     description: "minst två personer",
-    disches: [
+    dishName: [
       "piatto piatto misto di salumi",
       "carpaccio på helleflundra",
       "ragu di coniglio",
@@ -89,5 +89,5 @@ export default [
     course: "avsmakning",
   },
 
-  { course: "vin", isWine: true },
+  { course: "vin" },
 ];
