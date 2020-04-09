@@ -35,6 +35,10 @@ var ReactMenu = function (_React$Component) {
 
       var navButtons = ["Antipasti", "Pasta", "Pizza", "Secondi", "Dolci", "Avsmakning", "Vin"];
 
+      var dishes = menu.filter(function (dish) {
+        return dish.course == _this2.state.course.toLowerCase();
+      });
+
       return React.createElement(
         "div",
         { className: "menu" },
@@ -53,10 +57,7 @@ var ReactMenu = function (_React$Component) {
             })
           )
         ),
-        React.createElement(CourseMenu, {
-          course: this.state.course.toLowerCase(),
-          dishes: menu[this.state.course.toLowerCase()]
-        })
+        React.createElement(CourseMenu, { dishes: dishes })
       );
     }
   }]);

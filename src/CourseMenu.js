@@ -1,4 +1,6 @@
-const CourseMenu = ({ course, dishes }) => {
+const CourseMenu = ({ dishes }) => {
+  const course = dishes && dishes[0] && dishes[0].course;
+
   function getDishMarkup(dish) {
     if (dish.packageName) {
       const {

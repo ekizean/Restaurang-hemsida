@@ -24,6 +24,10 @@ class ReactMenu extends React.Component {
       "Vin",
     ];
 
+    const dishes = menu.filter((dish) => {
+      return dish.course == this.state.course.toLowerCase();
+    });
+
     return (
       <div className="menu">
         <div className="course-navigator">
@@ -39,10 +43,7 @@ class ReactMenu extends React.Component {
             })}
           </div>
         </div>
-        <CourseMenu
-          course={this.state.course.toLowerCase()}
-          dishes={menu[this.state.course.toLowerCase()]}
-        />
+        <CourseMenu dishes={dishes} />
       </div>
     );
   }

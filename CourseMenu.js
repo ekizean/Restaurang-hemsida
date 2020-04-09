@@ -1,6 +1,7 @@
 var CourseMenu = function CourseMenu(_ref) {
-  var course = _ref.course,
-      dishes = _ref.dishes;
+  var dishes = _ref.dishes;
+
+  var course = dishes && dishes[0] && dishes[0].course;
 
   function getDishMarkup(dish) {
     if (dish.packageName) {
