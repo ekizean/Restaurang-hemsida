@@ -31,6 +31,10 @@ var ReactMenu = function (_React$Component) {
   _createClass(ReactMenu, [{
     key: "render",
     value: function render() {
+      var _this2 = this;
+
+      var navButtons = ["Antipasti", "Pasta", "Pizza", "Secondi", "Dolci", "Avsmakning", "Vin"];
+
       return React.createElement(
         "div",
         { className: "menu" },
@@ -40,40 +44,12 @@ var ReactMenu = function (_React$Component) {
           React.createElement(
             "div",
             { className: "course-row" },
-            React.createElement(NavButton, {
-              thisCourse: "Antipasti",
-              clickOnNavButton: this.clickOnNavButton,
-              selectedCourse: this.state.course
-            }),
-            React.createElement(NavButton, {
-              thisCourse: "Pasta",
-              clickOnNavButton: this.clickOnNavButton,
-              selectedCourse: this.state.course
-            }),
-            React.createElement(NavButton, {
-              thisCourse: "Pizza",
-              clickOnNavButton: this.clickOnNavButton,
-              selectedCourse: this.state.course
-            }),
-            React.createElement(NavButton, {
-              thisCourse: "Secondi",
-              clickOnNavButton: this.clickOnNavButton,
-              selectedCourse: this.state.course
-            }),
-            React.createElement(NavButton, {
-              thisCourse: "Dolci",
-              clickOnNavButton: this.clickOnNavButton,
-              selectedCourse: this.state.course
-            }),
-            React.createElement(NavButton, {
-              thisCourse: "Avsmakning",
-              clickOnNavButton: this.clickOnNavButton,
-              selectedCourse: this.state.course
-            }),
-            React.createElement(NavButton, {
-              thisCourse: "Vin",
-              clickOnNavButton: this.clickOnNavButton,
-              selectedCourse: this.state.course
+            navButtons.map(function (navButton) {
+              return React.createElement(NavButton, {
+                thisCourse: navButton,
+                clickOnNavButton: _this2.clickOnNavButton,
+                selectedCourse: _this2.state.course
+              });
             })
           )
         ),

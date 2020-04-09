@@ -14,45 +14,29 @@ class ReactMenu extends React.Component {
   };
 
   render() {
+    const navButtons = [
+      "Antipasti",
+      "Pasta",
+      "Pizza",
+      "Secondi",
+      "Dolci",
+      "Avsmakning",
+      "Vin",
+    ];
+
     return (
       <div className="menu">
         <div className="course-navigator">
           <div className="course-row">
-            <NavButton
-              thisCourse="Antipasti"
-              clickOnNavButton={this.clickOnNavButton}
-              selectedCourse={this.state.course}
-            />
-            <NavButton
-              thisCourse="Pasta"
-              clickOnNavButton={this.clickOnNavButton}
-              selectedCourse={this.state.course}
-            />
-            <NavButton
-              thisCourse="Pizza"
-              clickOnNavButton={this.clickOnNavButton}
-              selectedCourse={this.state.course}
-            />
-            <NavButton
-              thisCourse="Secondi"
-              clickOnNavButton={this.clickOnNavButton}
-              selectedCourse={this.state.course}
-            />
-            <NavButton
-              thisCourse="Dolci"
-              clickOnNavButton={this.clickOnNavButton}
-              selectedCourse={this.state.course}
-            />
-            <NavButton
-              thisCourse="Avsmakning"
-              clickOnNavButton={this.clickOnNavButton}
-              selectedCourse={this.state.course}
-            />
-            <NavButton
-              thisCourse="Vin"
-              clickOnNavButton={this.clickOnNavButton}
-              selectedCourse={this.state.course}
-            />
+            {navButtons.map((navButton) => {
+              return (
+                <NavButton
+                  thisCourse={navButton}
+                  clickOnNavButton={this.clickOnNavButton}
+                  selectedCourse={this.state.course}
+                />
+              );
+            })}
           </div>
         </div>
         <CourseMenu
