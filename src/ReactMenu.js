@@ -1,5 +1,4 @@
 "use strict";
-import menu from "../menu.js";
 import CourseMenu from "./CourseMenu.js";
 import NavButton from "./NavButton.js";
 
