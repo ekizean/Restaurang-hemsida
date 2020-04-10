@@ -25,7 +25,7 @@ var CourseMenu = function CourseMenu(_ref) {
             packageName,
             React.createElement(
               "span",
-              { className: "pris" },
+              { className: "price" },
               price
             )
           ),
@@ -55,7 +55,7 @@ var CourseMenu = function CourseMenu(_ref) {
             wineName,
             React.createElement(
               "span",
-              { className: "pris" },
+              { className: "price" },
               winePrice
             )
           )
@@ -78,7 +78,7 @@ var CourseMenu = function CourseMenu(_ref) {
             _dishName,
             React.createElement(
               "span",
-              { className: "pris" },
+              { className: "price" },
               _price
             )
           ),

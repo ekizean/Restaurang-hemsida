@@ -11,7 +11,7 @@ const CourseMenu = ({ dishes }) => {
           <dl className="package-menu--box">
             <dt>
               {packageName}
-              <span className="pris">{price}</span>
+              <span className="price">{price}</span>
             </dt>
             <dd>
               <span className="lower-case gold">
@@ -23,7 +23,7 @@ const CourseMenu = ({ dishes }) => {
             </dd>
             <dt>
               {wineName}
-              <span className="pris">{winePrice}</span>
+              <span className="price">{winePrice}</span>
             </dt>
           </dl>
         </div>
@@ -35,7 +35,7 @@ const CourseMenu = ({ dishes }) => {
           <dl>
             <dt>
               {dishName}
-              <span className="pris">{price}</span>
+              <span className="price">{price}</span>
             </dt>
             <dd>{description}</dd>
           </dl>
