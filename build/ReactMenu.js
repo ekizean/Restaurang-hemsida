@@ -20,17 +20,33 @@ var ReactMenu = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (ReactMenu.__proto__ || Object.getPrototypeOf(ReactMenu)).call(this, props));
 
-    _this.clickOnNavButton = function (course) {
-      _this.setState({ course: course });
+    _this.setCurrentDishes = function () {
+      var dishes = _this.state.menuData.filter(function (dish) {
+        return dish.course.toLowerCase() == _this.state.course.toLowerCase();
+      });
+
+      _this.setState({ dishes: dishes });
     };
 
-    _this.state = { course: "Antipasti" };
+    _this.clickOnNavButton = function (course) {
+      _this.setState({ course: course }, function () {
+        _this.setCurrentDishes();
+      });
+    };
+
+    _this.state = {
+      course: "Antipasti",
+      menuData: [],
+      dishes: []
+    };
     return _this;
   }
 
   _createClass(ReactMenu, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      var _this2 = this;
+
       var url = "../Meny hemsida.xlsx";
 
       /* set up async GET request */
@@ -45,21 +61,20 @@ var ReactMenu = function (_React$Component) {
         /* DO SOMETHING WITH workbook HERE */
         var first_sheet = workbook.SheetNames[0];
         var worksheet = workbook.Sheets[first_sheet];
-        console.log(XLSX.utils.sheet_to_json(worksheet));
-      };
+        var menuJson = XLSX.utils.sheet_to_json(worksheet);
 
+        _this2.setState({ menuData: menuJson }, function () {
+          _this2.setCurrentDishes();
+        });
+      };
       req.send();
     }
   }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
+      var _this3 = this;
 
       var navButtons = ["Antipasti", "Pasta", "Pizza", "Secondi", "Dolci", "Avsmakning", "Vin"];
-
-      var dishes = menu.filter(function (dish) {
-        return dish.course == _this2.state.course.toLowerCase();
-      });
 
       return React.createElement(
         "div",
@@ -73,13 +88,13 @@ var ReactMenu = function (_React$Component) {
             navButtons.map(function (navButton) {
               return React.createElement(NavButton, {
                 thisCourse: navButton,
-                clickOnNavButton: _this2.clickOnNavButton,
-                selectedCourse: _this2.state.course
+                clickOnNavButton: _this3.clickOnNavButton,
+                selectedCourse: _this3.state.course
               });
             })
           )
         ),
-        React.createElement(CourseMenu, { dishes: dishes })
+        React.createElement(CourseMenu, { dishes: this.state.dishes })
       );
     }
   }]);

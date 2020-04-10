@@ -6,7 +6,11 @@ import NavButton from "./NavButton.js";
 class ReactMenu extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { course: "Antipasti" };
+    this.state = {
+      course: "Antipasti",
+      menuData: [],
+      dishes: [],
+    };
   }
 
   componentDidMount() {
@@ -17,21 +21,34 @@ class ReactMenu extends React.Component {
     req.open("GET", url, true);
     req.responseType = "arraybuffer";
 
-    req.onload = function (e) {
+    req.onload = (e) => {
       var data = new Uint8Array(req.response);
       var workbook = XLSX.read(data, { type: "array" });
 
       /* DO SOMETHING WITH workbook HERE */
-      let first_sheet = workbook.SheetNames[0];
+      const first_sheet = workbook.SheetNames[0];
       const worksheet = workbook.Sheets[first_sheet];
-      console.log(XLSX.utils.sheet_to_json(worksheet));
-    };
+      const menuJson = XLSX.utils.sheet_to_json(worksheet);
 
+      this.setState({ menuData: menuJson }, () => {
+        this.setCurrentDishes();
+      });
+    };
     req.send();
   }
 
+  setCurrentDishes = () => {
+    const dishes = this.state.menuData.filter((dish) => {
+      return dish.course.toLowerCase() == this.state.course.toLowerCase();
+    });
+
+    this.setState({ dishes });
+  };
+
   clickOnNavButton = (course) => {
-    this.setState({ course });
+    this.setState({ course }, () => {
+      this.setCurrentDishes();
+    });
   };
 
   render() {
@@ -44,10 +61,6 @@ class ReactMenu extends React.Component {
       "Avsmakning",
       "Vin",
     ];
-
-    const dishes = menu.filter((dish) => {
-      return dish.course == this.state.course.toLowerCase();
-    });
 
     return (
       <div className="menu">
@@ -64,7 +77,7 @@ class ReactMenu extends React.Component {
             })}
           </div>
         </div>
-        <CourseMenu dishes={dishes} />
+        <CourseMenu dishes={this.state.dishes} />
       </div>
     );
   }

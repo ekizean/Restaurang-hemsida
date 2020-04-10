@@ -5,10 +5,10 @@ var CourseMenu = function CourseMenu(_ref) {
 
   function getDishMarkup(dish) {
     if (dish.packageName) {
+      var dishName = dish.dishName.split(",\r\n");
       var packageName = dish.packageName,
           price = dish.price,
           description = dish.description,
-          dishName = dish.dishName,
           wineName = dish.wineName,
           winePrice = dish.winePrice;
 
@@ -26,8 +26,7 @@ var CourseMenu = function CourseMenu(_ref) {
             React.createElement(
               "span",
               { className: "pris" },
-              price,
-              ":-"
+              price
             )
           ),
           React.createElement(
@@ -57,8 +56,7 @@ var CourseMenu = function CourseMenu(_ref) {
             React.createElement(
               "span",
               { className: "pris" },
-              winePrice,
-              ":-"
+              winePrice
             )
           )
         )
@@ -81,8 +79,7 @@ var CourseMenu = function CourseMenu(_ref) {
             React.createElement(
               "span",
               { className: "pris" },
-              _price,
-              ":-"
+              _price
             )
           ),
           React.createElement(
@@ -98,7 +95,7 @@ var CourseMenu = function CourseMenu(_ref) {
   var groupSize = 3;
   var showingContent = void 0;
 
-  if (course === "vin") {
+  if (!course) {
     showingContent = React.createElement(
       "div",
       { className: "wine-content" },

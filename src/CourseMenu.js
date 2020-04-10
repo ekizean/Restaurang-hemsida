@@ -3,21 +3,15 @@ const CourseMenu = ({ dishes }) => {
 
   function getDishMarkup(dish) {
     if (dish.packageName) {
-      const {
-        packageName,
-        price,
-        description,
-        dishName,
-        wineName,
-        winePrice,
-      } = dish;
+      const dishName = dish.dishName.split(",\r\n");
+      const { packageName, price, description, wineName, winePrice } = dish;
 
       return (
         <div className="col-sm-4">
           <dl className="package-menu--box">
             <dt>
               {packageName}
-              <span className="pris">{price}:-</span>
+              <span className="pris">{price}</span>
             </dt>
             <dd>
               <span className="lower-case gold">
@@ -29,7 +23,7 @@ const CourseMenu = ({ dishes }) => {
             </dd>
             <dt>
               {wineName}
-              <span className="pris">{winePrice}:-</span>
+              <span className="pris">{winePrice}</span>
             </dt>
           </dl>
         </div>
@@ -41,7 +35,7 @@ const CourseMenu = ({ dishes }) => {
           <dl>
             <dt>
               {dishName}
-              <span className="pris">{price}:-</span>
+              <span className="pris">{price}</span>
             </dt>
             <dd>{description}</dd>
           </dl>
@@ -53,7 +47,7 @@ const CourseMenu = ({ dishes }) => {
   const groupSize = 3;
   let showingContent;
 
-  if (course === "vin") {
+  if (!course) {
     showingContent = (
       <div className="wine-content">
         <span className="wine-description gold lower-case">
