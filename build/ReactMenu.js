@@ -29,6 +29,28 @@ var ReactMenu = function (_React$Component) {
   }
 
   _createClass(ReactMenu, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var url = "../Meny hemsida.xlsx";
+
+      /* set up async GET request */
+      var req = new XMLHttpRequest();
+      req.open("GET", url, true);
+      req.responseType = "arraybuffer";
+
+      req.onload = function (e) {
+        var data = new Uint8Array(req.response);
+        var workbook = XLSX.read(data, { type: "array" });
+
+        /* DO SOMETHING WITH workbook HERE */
+        var first_sheet = workbook.SheetNames[0];
+        var worksheet = workbook.Sheets[first_sheet];
+        console.log(XLSX.utils.sheet_to_json(worksheet));
+      };
+
+      req.send();
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this2 = this;

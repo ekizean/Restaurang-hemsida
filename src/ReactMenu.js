@@ -9,6 +9,27 @@ class ReactMenu extends React.Component {
     this.state = { course: "Antipasti" };
   }
 
+  componentDidMount() {
+    var url = "../Meny hemsida.xlsx";
+
+    /* set up async GET request */
+    var req = new XMLHttpRequest();
+    req.open("GET", url, true);
+    req.responseType = "arraybuffer";
+
+    req.onload = function (e) {
+      var data = new Uint8Array(req.response);
+      var workbook = XLSX.read(data, { type: "array" });
+
+      /* DO SOMETHING WITH workbook HERE */
+      let first_sheet = workbook.SheetNames[0];
+      const worksheet = workbook.Sheets[first_sheet];
+      console.log(XLSX.utils.sheet_to_json(worksheet));
+    };
+
+    req.send();
+  }
+
   clickOnNavButton = (course) => {
     this.setState({ course });
   };
