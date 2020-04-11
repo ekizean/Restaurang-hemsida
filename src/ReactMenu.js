@@ -13,7 +13,7 @@ class ReactMenu extends React.Component {
   }
 
   componentDidMount() {
-    getMenuData();
+    this.getMenuData();
   }
 
   getMenuData() {
