@@ -1,46 +1,14 @@
+import Dish from "./Dish.js";
+import Package from "./Package.js";
+
 const CourseMenu = ({ dishes }) => {
   const course = dishes && dishes[0] && dishes[0].course;
 
   function getDishMarkup(dish) {
     if (dish.packageName) {
-      const dishName = dish.dishName.split(",\r\n");
-      const { packageName, price, description, wineName, winePrice } = dish;
-
-      return (
-        <div className="col-sm-4">
-          <dl className="package-menu--box">
-            <dt>
-              {packageName}
-              <span className="price">{price}</span>
-            </dt>
-            <dd>
-              <span className="lower-case gold">
-                {description && <i>{description}</i>}
-              </span>
-              {dishName.map((dish) => {
-                return <div className="package-menu--dish">{dish}</div>;
-              })}
-            </dd>
-            <dt>
-              {wineName}
-              <span className="price">{winePrice}</span>
-            </dt>
-          </dl>
-        </div>
-      );
+      return <Package dish={dish} key={dish.packageName} />;
     } else {
-      const { dishName, price, description } = dish;
-      return (
-        <div className="col-sm-4 dish">
-          <dl>
-            <dt>
-              {dishName}
-              <span className="price">{price}</span>
-            </dt>
-            <dd>{description}</dd>
-          </dl>
-        </div>
-      );
+      return <Dish dish={dish} key={dish.dishName} />;
     }
   }
 
@@ -69,7 +37,11 @@ const CourseMenu = ({ dishes }) => {
         return acc;
       }, [])
       .map((rowContent) => {
-        return <div className="row">{rowContent}</div>;
+        return (
+          <div key={rowContent} className="row">
+            {rowContent}
+          </div>
+        );
       });
   }
 

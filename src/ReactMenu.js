@@ -75,6 +75,7 @@ class ReactMenu extends React.Component {
                   thisCourse={navButton}
                   clickOnNavButton={this.clickOnNavButton}
                   selectedCourse={this.state.course}
+                  key={`${navButton}`}
                 />
               );
             })}
