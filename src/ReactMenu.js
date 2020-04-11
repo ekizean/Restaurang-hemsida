@@ -13,16 +13,20 @@ class ReactMenu extends React.Component {
   }
 
   componentDidMount() {
-    var url = "../Meny hemsida.xlsx";
+    getMenuData();
+  }
+
+  getMenuData() {
+    const url = "../Meny hemsida.xlsx";
 
     /* set up async GET request */
-    var req = new XMLHttpRequest();
+    const req = new XMLHttpRequest();
     req.open("GET", url, true);
     req.responseType = "arraybuffer";
 
     req.onload = (e) => {
-      var data = new Uint8Array(req.response);
-      var workbook = XLSX.read(data, { type: "array" });
+      const data = new Uint8Array(req.response);
+      const workbook = XLSX.read(data, { type: "array" });
 
       /* DO SOMETHING WITH workbook HERE */
       const first_sheet = workbook.SheetNames[0];
