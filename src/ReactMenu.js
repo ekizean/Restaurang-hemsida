@@ -54,16 +54,17 @@ class ReactMenu extends React.Component {
     });
   };
 
+  getUniqueCourses = () => {
+    const uniqueCourses = new Set();
+    this.state.menuData.forEach((dish) => {
+      uniqueCourses.add(dish.course);
+    });
+
+    return Array.from(uniqueCourses);
+  };
+
   render() {
-    const navButtons = [
-      "Antipasti",
-      "Pasta",
-      "Pizza",
-      "Secondi",
-      "Dolci",
-      "Avsmakning",
-      "Vin",
-    ];
+    const navButtons = this.getUniqueCourses();
 
     return (
       <div className="menu">

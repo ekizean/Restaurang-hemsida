@@ -187,26 +187,20 @@ li.nav-item {
   padding: 0px 1px;
 }
 
-/* Meny till maträtterna*/
-.nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
-  /* Copy paste från inspector mode */
+.nav-link.active,
+.show > .nav-link {
   color: #c9c8bb;
   background-color: #580000;
 }
 
-.nav-pills .nav-link {
+.nav-link {
   color: rgb(169, 150, 107);
   background-color: rgb(22, 42, 37);
   margin-bottom: 2px;
 }
 
-.nav-pills .nav-link:hover {
+.nav-link:hover {
   background-color: rgb(51, 85, 76);
-}
-
-  color: #c9c8bb;
-  background-color: #5d1111;
 }
 
 .nav-link:focus {
