@@ -38,7 +38,7 @@ const CourseMenu = ({ dishes }) => {
       }, [])
       .map((rowContent) => {
         return (
-          <div key={rowContent} className="row">
+          <div key={rowContent[0] && rowContent[0].key} className="row">
             {rowContent}
           </div>
         );
