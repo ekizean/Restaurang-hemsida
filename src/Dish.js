@@ -1,12 +1,11 @@
+import DT from "./DT.js";
+
 const Dish = ({ dish }) => {
   const { dishName, price, description } = dish;
   return (
     <div className="col-sm-4 dish">
       <dl>
-        <dt className="dish-title">
-          <span>{dishName}</span>
-          <span className="price">{price}</span>
-        </dt>
+        <DT name={dishName} price={price} />
         <dd>{description}</dd>
       </dl>
     </div>
