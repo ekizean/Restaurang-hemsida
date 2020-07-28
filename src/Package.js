@@ -1,5 +1,5 @@
 const Package = ({ dish }) => {
-  const dishName = dish.dishName.split(",\r\n");
+  const dishName = dish.dishName.split(",");
   const { packageName, price, description, wineName, winePrice } = dish;
 
   return (
