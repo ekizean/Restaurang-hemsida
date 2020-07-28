@@ -3,8 +3,8 @@ const Dish = ({ dish }) => {
   return (
     <div className="col-sm-4 dish">
       <dl>
-        <dt>
-          {dishName}
+        <dt className="dish-title">
+          <span>{dishName}</span>
           <span className="price">{price}</span>
         </dt>
         <dd>{description}</dd>
