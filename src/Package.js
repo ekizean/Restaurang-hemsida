@@ -15,7 +15,7 @@ const Package = ({ dish }) => {
           {dishName.map((dish) => {
             return (
               <div key={dish} className="package-menu--dish">
-                {dish}
+                {dish.trim()}
               </div>
             );
           })}
