@@ -65,6 +65,7 @@ class ReactMenu extends React.Component {
 
     render() {
         const navButtons = this.getUniqueCourses();
+        navButtons.push('Vin');
 
         return (
             <div className="menu">
